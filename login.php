@@ -1,17 +1,25 @@
 <?php
-include("config.php"); // Include the database configuration
+define('DB_HOST', 'localhost');
+define('DB_USERNAME', 'rectubmx_simplegreen');
+define('DB_PASSWORD', '3N2h0DEwaDJ#');
+define('DB_NAME', 'rectubmx_simplegreenenergy');
 
-// Check if the form is submitted
+
+
+// Establish a database connection
+$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve user input
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Validate the input
     if (empty($email) || empty($password)) {
         $error_message = "Please enter both email and password.";
     } else {
-        // Perform a SQL query to check the admin's credentials
         $sql = "SELECT * FROM admins WHERE email = '$email'";
         $result = $conn->query($sql);
 
@@ -19,12 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $row = $result->fetch_assoc();
             $storedPassword = $row['password'];
 
-            // Compare the plain text password
             if ($password == $storedPassword) {
-                // Authentication successful
-                session_start(); // Start the session
-                $_SESSION['email'] = $email; // Store the email in the session variable
-                header("Location: index.php"); // Redirect to the index page
+                session_start();
+                $_SESSION['email'] = $email;
+                header("Location: index.php");
                 exit();
             } else {
                 $error_message = "Invalid credentials. Please try again.";
@@ -35,9 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
     
@@ -107,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="input-group-addon"><i class="fa fa-key"></i></span>
                                     <input name="password" id="pass" type="password" class="form-control" name="password" placeholder="******">
                                 </div>
-                                <span class="help-block small">Your unique username to app</span>
+                                <span class="help-block small">enter your secure key</span>
                             </div>
                             <div>
                             <button class="btn btn-primary pull-right">Login</button>

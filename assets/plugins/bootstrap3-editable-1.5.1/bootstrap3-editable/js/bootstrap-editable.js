@@ -4594,7 +4594,7 @@ $(function(){
         **/          
         viewformat: null,        
         /**
-        Template used for displaying dropdowns.
+        .. used for displaying dropdowns.
         
         @property template 
         @type string

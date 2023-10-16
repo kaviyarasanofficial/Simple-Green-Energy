@@ -219,7 +219,7 @@ if (!isset($_SESSION['email'])) {
                             </ul>
                         </li>
                         <!--End dropdown mega menu-->
-                        <li><a href="https://themeforest.net/item/adminpage-responsive-bootstrap-admin-template-dashboard/20281702?s_rank=5" target="_blank" class="btn-buy hidden-xs hidden-sm hidden-md">Buy now $25</a></li>
+                       <li><a href="lockscreen.php"  class="btn-buy hidden-xs hidden-sm hidden-md">Lockscreen</a></li>
                     </ul>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
@@ -423,7 +423,7 @@ if (!isset($_SESSION['email'])) {
                         <li class="nav-heading "> <span>Main Navigation&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li class="active"><a href="index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Charts<span class="fa arrow"></span></a>
+                            <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Lead Generation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Flot Chart</a></li>
                                 <li><a href="charts_Js.php">Chart js</a></li>
@@ -441,7 +441,7 @@ if (!isset($_SESSION['email'])) {
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Tables<span class="fa arrow"></span></a>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Admin<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
@@ -450,6 +450,45 @@ if (!isset($_SESSION['email'])) {
                             </ul>
                         </li>
                         <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales Rep<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                <li><a href="dataTables.php">Data tables</a></li>
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Surveyor<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                <li><a href="dataTables.php">Data tables</a></li>
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Installers
+<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                <li><a href="dataTables.php">Data tables</a></li>
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Customer portal
+<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                <li><a href="dataTables.php">Data tables</a></li>
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- <li>
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Forms<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="forms_basic.php">Basic Forms</a></li>
@@ -467,7 +506,7 @@ if (!isset($_SESSION['email'])) {
                                 <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
                                 <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
@@ -755,6 +794,7 @@ if (!isset($_SESSION['email'])) {
                         <div class=header-title>
                             <h1>Welcome Simple Green Energy</h1>
                             <!-- <small>Very detailed &amp; featured admin.</small> -->
+                             <p><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Admin'; ?>!</p>
                             <ol class=breadcrumb>
                                 <li><a href=index.php><i class=pe-7s-home></i> Home</a></li>
                                 <li class=active>Dashboard</li>

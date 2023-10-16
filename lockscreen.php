@@ -1,3 +1,19 @@
+<?php
+// Start the session to access session variables
+session_start();
+
+// Check if the user is not logged in (no session variable is set)
+if (!isset($_SESSION['email'])) {
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+}
+
+// If the user is logged in, you can display the content of index.php
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -7,7 +23,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Adminpage - Responsive Bootstrap Admin Template Dashboard</title>
+        <title>Adminpage - Responsive Bootstrap Admin .. Dashboard</title>
         <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
         <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
@@ -46,7 +62,7 @@
                     <img src="assets/dist/img/avatar.png" class="img-responsive img-circle img-thumbnail" alt="thumbnail">
                 </div>
                 <div class="form-group">
-                    <h3>John Deo</h3>
+                <p><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Admin'; ?>!</p>
                     <p class="text-muted">Enter your password to access the admin.</p>
                     <div class="input-group m-t-20">
                         <input class="form-control" placeholder="Password" type="password">

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Adminpage - Responsive Bootstrap Admin Template Dashboard</title>
+        <title>Adminpage - Responsive Bootstrap Admin .. Dashboard</title>
         <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
         <script src="../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
@@ -145,8 +145,8 @@
                                             <li><a href="labels-badges-alerts.php"><i class="fa fa-exclamation"></i>labels, Badges, Alerts</a></li>
                                             <li><a href="charts_flot.php"><i class="fa fa-area-chart"></i>Flot Chart</a></li>
                                             <li><a href="charts_Js.php"><i class="fa fa-bar-chart"></i>Chart js</a></li>
-                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Morris Charts</a></li>
-                                            <li><a href="charts_sparkline.php"><i class="fa fa-line-chart"></i>Sparkline Charts</a></li>
+                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Morris Lead Generation</a></li>
+                                            <li><a href="charts_sparkline.php"><i class="fa fa-line-chart"></i>Sparkline Lead Generation</a></li>
                                             <li><a href="maps_data.php"><i class="fa fa-map-marker"></i>Data Maps</a></li>
                                         </ul>
                                     </div>
@@ -206,7 +206,7 @@
                             </ul>
                         </li>
                         <!--End dropdown mega menu-->
-                        <li><a href="https://themeforest.net/item/adminpage-responsive-bootstrap-admin-template-dashboard/20281702?s_rank=5" target="_blank" class="btn-buy hidden-xs hidden-sm hidden-md">Buy now $25</a></li>
+                       <li><a href="lockscreen.php"  class="btn-buy hidden-xs hidden-sm hidden-md">Lockscreen</a></li>
                     </ul>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
@@ -410,13 +410,13 @@
                         <li class="nav-heading "> <span>Main Navigation&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li><a href="index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Charts<span class="fa arrow"></span></a>
+                            <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Lead Generation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="charts_flot.php">Flot Chart</a></li>
-                                <li><a href="charts_Js.php">Chart js</a></li>
-                                <li><a href="charts_morris.php">Morris Charts</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                                <li><a href="ATP manage.php">ATP Management</a></li>
+                                <li><a href="LeadsManage.php">Leads</a></li>
+                                <li><a href="charts_morris.php">Morris Lead Generation</a></li>
+                                <li><a href="charts_sparkline.php">Sparkline Lead Generation</a></li>
+                                <li><a href="charts_am.php">Am Lead Generation</a></li>
                             </ul>
                         </li>
                         <li>
@@ -427,15 +427,54 @@
                                 <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Tables<span class="fa arrow"></span></a>
+                       <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Admin<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
-                                <li><a href="dataTables.php">Data tables</a></li>
+                                 <!-- <li><a href="dataTables1.php">Data tables</a></li> -->
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales Rep<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                 <!-- <li><a href="dataTables1.php">Data tables</a></li> -->
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Surveyor<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                 <!-- <li><a href="dataTables1.php">Data tables</a></li> -->
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Installers
+<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                 <!-- <li><a href="dataTables1.php">Data tables</a></li> -->
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Customer portal
+<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="table.php">Simple tables</a></li>
+                                 <!-- <li><a href="dataTables1.php">Data tables</a></li> -->
+                                <li><a href="footable.php">FooTable</a></li>
+                                <li><a href="x-editable.php">X-editable</a></li>
+                            </ul>
+                        </li>
+
                         <li class="active">
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Forms<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
