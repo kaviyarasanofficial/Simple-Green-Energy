@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 // Include the "ead.php" file
 include('php/atpleads.php');
 ?>
@@ -24,7 +27,17 @@ include('php/atpleads.php');
                 }
             });
         </script>
-            
+            <style>
+                .td1 {
+    display: flex;
+    align-items: center;
+}
+
+.td1 button {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+                </style>
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -820,11 +833,17 @@ include('php/atpleads.php');
                                                         <td><?= $record["addressLine1"] ?></td>
                                                         <td><?= $record["city"] ?></td>
                                                         <td><?= $record["postcode"] ?></td>
-                                                        <td>
-                                                        <button data-toggle="modal" data-target="#updateModal" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                                                        <button onclick="confirmDelete(<?= $record['f.no'] ?>)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Delete "><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                        </td>
-                                                    </tr>
+                                                        <td class="td1">
+                                                        <form action="atpupdate.php" method="post">
+                                                            <input type="hidden" name="fno" value="<?= $record['f.no'] ?>">
+                                                            <button type="submit" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                        </form>
+                                                            <button onclick="confirmDelete(<?= $record['f.no'] ?>)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Delete">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </td></tr>
                                              <?php endforeach; ?>
                                             </tbody>
                                         </table>
@@ -836,181 +855,12 @@ include('php/atpleads.php');
                 </div> <!-- /.main content -->
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
-        <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update Record</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Form for updating data -->
-                <form id="updateForm" class="row">
-                    <!-- Left Side - 10 Fields -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="fuleType">Fule Type</label>
-                            <input type="text" class="form-control" id="fuleType" name="fuleType">
-                        </div>
-                        <div class="form-group">
-                            <label for="boilerType">Boiler Type</label>
-                            <input type="text" class="form-control" id="boilerType" name="boilerType">
-                        </div>
-                        <div class="form-group">
-                            <label for="boilerCondition">Boiler Condition</label>
-                            <input type="text" class="form-control" id="boilerCondition" name="boilerCondition">
-                        </div>
-                        <div class="form-group">
-                            <label for="isWallMounted">Is Wall Mounted</label>
-                            <input type="text" class="form-control" id="isWallMounted" name="isWallMounted">
-                        </div>
-                        <div class="form-group">
-                            <label for="bolierAge">Boiler Age</label>
-                            <input type="text" class="form-control" id="bolierAge" name="bolierAge">
-                        </div>
-                        <div class="form-group">
-                            <label for="shouldBoilerLocationChange">Should Boiler Location Change</label>
-                            <input type="text" class="form-control" id="shouldBoilerLocationChange" name="shouldBoilerLocationChange">
-                        </div>
-                        <div class="form-group">
-                            <label for="propertyType">Property Type</label>
-                            <input type="text" class="form-control" id="propertyType" name="propertyType">
-                        </div>
-                        <div class="form-group">
-                            <label for="bedroomCount">Bedroom Count</label>
-                            <input type="text" class="form-control" id="bedroomCount" name="bedroomCount">
-                        </div>
-                        <div class="form-group">
-                            <label for="radiatorCount">Radiator Count</label>
-                            <input type="text" class="form-control" id="radiatorCount" name="radiatorCount">
-                        </div>
-                        <div class="form-group">
-                            <label for="isThermostaticRadiatorValvesPresent">Is Thermostatic Radiator Valves Present</label>
-                            <input type="text" class="form-control" id="isThermostaticRadiatorValvesPresent" name="isThermostaticRadiatorValvesPresent">
-                        </div>
-                    </div>
+       <!-- Modal for updating the record -->
 
-                    <!-- Right Side - 10 Fields -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="flueExhaustLocation">Flue Exhaust Location</label>
-                            <input type="text" class="form-control" id="flueExhaustLocation" name="flueExhaustLocation">
-                        </div>
-                        <div class="form-group">
-                            <label for="flueLocation">Flue Location</label>
-                            <input type="text" class="form-control" id="flueLocation" name="flueLocation">
-                        </div>
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" name="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="addressLine1">Address Line 1</label>
-                            <input type="text" class="form-control" id="addressLine1" name="addressLine1">
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" class="form-control" id="city" name="city">
-                        </div>
-                        <div class="form-group">
-                            <label for="postcode">Postcode</label>
-                            <input type="text" class="form-control" id="postcode" name="postcode">
-                        </div>
-                    </div>
-                    <!-- Add hidden input for record ID if needed -->
-                    <input type="hidden" id="recordId" name="recordId" value="">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="updateRecord">Update Record</button>
-            </div>
-        </div>
+
     </div>
 </div>
 
-<script>
-// JavaScript for opening the modal and populating data
-$("#updateModal").on("show.bs.modal", function (event) {
-    // Button that triggered the modal
-    const button = $(event.relatedTarget);
-    const recordId = button.data("recordid");
-
-    // Fetch data based on recordId using AJAX and populate form fields
-    $.ajax({
-        type: "POST",
-        url: "php/atp_get_data.php",
-        data: { recordId: recordId },
-        success: function (data) {
-            if (data.error) {
-                alert(data.error);
-            } else {
-                // Populate form fields with data
-                $("#fuleType").val(data.fuleType);
-                $("#boilerType").val(data.boilerType);
-                $("#boilerCondition").val(data.boilerCondition);
-                $("#isWallMounted").val(data.isWallMounted);
-                $("#bolierAge").val(data.bolierAge);
-                $("#shouldBoilerLocationChange").val(data.shouldBoilerLocationChange);
-                $("#propertyType").val(data.propertyType);
-                $("#bedroomCount").val(data.bedroomCount);
-                $("#radiatorCount").val(data.radiatorCount);
-                $("#isThermostaticRadiatorValvesPresent").val(data.isThermostaticRadiatorValvesPresent);
-                $("#flueExhaustLocation").val(data.flueExhaustLocation);
-                $("#flueLocation").val(data.flueLocation);
-                $("#firstName").val(data.firstName);
-                $("#lastName").val(data.lastName);
-                $("#email").val(data.email);
-                $("#phone").val(data.phone);
-                $("#addressLine1").val(data.addressLine1);
-                $("#city").val(data.city);
-                $("#postcode").val(data.postcode);
-            }
-        },
-        error: function (error) {
-            alert("Error fetching data.");
-        }
-    });
-});
-
-// JavaScript for updating the record
-$("#updateRecord").on("click", function () {
-    // Get the form data
-    const formData = $("#updateForm").serialize();
-
-    // Send an AJAX request to update.php (replace with your server-side script)
-    $.ajax({
-        type: "POST",
-        url: "php/update.php", // Replace with the correct path to your update script
-        data: formData,
-        success: function (response) {
-            // Handle the update success or errors
-            $("#updateModal").modal("hide"); // Hide the modal
-
-            // You can show a success message here or reload the page
-            alert("Record updated successfully.");
-        },
-        error: function (error) {
-            // Handle errors
-            alert("Error updating the record.");
-        },
-    });
-});
-</script>
 
 
         <script>

@@ -25,13 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["recordId"])) {
 
         if ($result->num_rows > 0) {
             // Data found, fetch it as an associative array
-            error_log(print_r($row, true));
-$row = $result->fetch_assoc();
+            $row = $result->fetch_assoc();
 
-// Return the data as JSON
-header('Content-Type: application/json');
-echo json_encode($row);
-
+            // Return the data as JSON
+            header('Content-Type: application/json');
+            echo json_encode($row);
         } else {
             // No data found
             echo json_encode(["error" => "No data found"]);
