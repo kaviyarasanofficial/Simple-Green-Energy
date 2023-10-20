@@ -24,6 +24,33 @@ include('php/userleads.php');
                 }
             });
         </script>
+
+<style>
+                .td1 {
+    display: flex;
+    align-items: center;
+}
+
+.td1 button {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+                </style>
+                <style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
+<style>
+        .notification-icon {
+            cursor: pointer;
+        }
+    </style>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -756,7 +783,7 @@ include('php/userleads.php');
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->
-                  
+                    
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="panel panel-bd lobidrag">
@@ -774,6 +801,7 @@ include('php/userleads.php');
                                             <thead>
                                                 <tr>
                                                 <th>F.No</th>
+                                                <th>Request Document Notify</th>
                                                 <th>Heating Source</th>
                                                 <th>Is Heating Source Old</th>
                                                 <th>Property Ownership</th>
@@ -798,6 +826,7 @@ include('php/userleads.php');
                                                 <?php foreach ($records as $record): ?>
                                                     <tr>
                                                         <td><?= $record["f.no"] ?></td>
+                                                        <td ><button type="button" class="btn btn-primary notify-button" data-email="<?= $record["email"] ?>" data-record-id="<?= $record["f.no"] ?>">Notify</button></td>
                                                         <td><?= $record["heatingSource"] ?></td>
                                                         <td><?= $record["isHeatingSourceOld"] ?></td>
                                                         <td><?= $record["propertyOwnership"] ?></td>
@@ -815,9 +844,16 @@ include('php/userleads.php');
                                                         <td><?= $record["postcode"] ?></td>
                                                         <td><?= $record["reference"] ?></td>
                                                         <td><?= $record["password"] ?></td>
-                                                        <td>
-                                                        <button class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                                                        <button onclick="confirmDelete(<?= $record['f.no'] ?>)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Delete "><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                        <td class="td1">
+                                                        <form action="leadupdate.php" method="post">
+                                                            <input type="hidden" name="fno" value="<?= $record['f.no'] ?>">
+                                                            <button type="submit" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                            </button>
+                                                        </form>
+                                                            <button onclick="confirmDelete(<?= $record['f.no'] ?>)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Delete">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -833,7 +869,42 @@ include('php/userleads.php');
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
         <!-- START CORE PLUGINS -->
-       
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.notify-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const email = this.getAttribute('data-email');
+                    const recordId = this.getAttribute('data-record-id');
+
+                    if (this.innerText === 'Notify') {
+                        // Change button text to "Notified" and disable it
+                        this.innerText = 'Notified';
+                        this.classList.remove('btn-primary');
+                        this.classList.add('btn-info');
+                        this.disabled = true;
+
+                        // Send an AJAX request to a PHP script to send the email
+                        sendEmail(email, recordId);
+                    }
+                });
+            });
+
+            function sendEmail(email, recordId) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'requestdocmail.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Handle the response from the PHP script if needed
+                        console.log(xhr.responseText);
+                    }
+                };
+                xhr.send('email=' + email + '&record_id=' + recordId);
+            }
+        });
+    </script>
         <script>
 function confirmDelete(recordId) {
     Swal.fire({

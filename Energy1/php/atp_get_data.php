@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["recordId"])) {
     $recordId = $_POST["recordId"];
 
     // Prepare and execute a SELECT query to retrieve data based on the record ID
-    $sql = "SELECT * FROM atp WHERE `f.no` = ?";
+    $sql = "SELECT * FROM ATP WHERE `f.no` = ?";
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {

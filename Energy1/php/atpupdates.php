@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $postcode = $conn->real_escape_string($_POST['postcode']);
 
     // Create a SQL query to update the values in the database
-    $sql = "UPDATE atp SET
+    $sql = "UPDATE ATP SET
             fuleType = '$fuleType',
             boilerType = '$boilerType',
             boilerCondition = '$boilerCondition',

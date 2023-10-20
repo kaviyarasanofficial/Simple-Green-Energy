@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 14, 2023 at 11:33 AM
+-- Generation Time: Oct 18, 2023 at 12:28 PM
 -- Server version: 5.7.23-23
 -- PHP Version: 8.1.16
 
@@ -37,12 +37,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`email`, `password`) VALUES
-('john.doe@gmail.com', 'root123'),
-('john.doe1@gmail.com', 'root123'),
-('john2.doe1@gmail.com', 'root123'),
-('john2.doe8@gmail.com', 'root123'),
-('klscse6@gmail.com', '12345678'),
-('user1@gmail.com', '12345678');
+('klscse6@gmail.com', 'admin1234'),
+('sgecrm@gmail.com', 'admin123');
 
 -- --------------------------------------------------------
 
@@ -51,6 +47,7 @@ INSERT INTO `admins` (`email`, `password`) VALUES
 --
 
 CREATE TABLE `ATP` (
+  `f.no` int(11) NOT NULL,
   `fuleType` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `boilerType` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `boilerCondition` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
@@ -76,9 +73,9 @@ CREATE TABLE `ATP` (
 -- Dumping data for table `ATP`
 --
 
-INSERT INTO `ATP` (`fuleType`, `boilerType`, `boilerCondition`, `isWallMounted`, `bolierAge`, `shouldBoilerLocationChange`, `propertyType`, `bedroomCount`, `radiatorCount`, `isThermostaticRadiatorValvesPresent`, `flueExhaustLocation`, `flueLocation`, `firstName`, `lastName`, `email`, `phone`, `addressLine1`, `city`, `postcode`) VALUES
-('LPG', 'System', 'Not Working', '1', '[10, 20]', '1', 'Park Home', '4', '2', '1', 'Roof', 'Flat Roof', 'John', 'Doe', 'john.doe@gmail3.com', 1234567890, '1st Lane', 'Birmingham', 44),
-('LPG', 'System', 'Not Working', '1', '[10, 20]', '1', 'Park Home', '4', '2', '1', 'Roof', 'Flat Roof', 'John', 'Doe', 'john.doe@gmail.com', 1234567890, '1st Lane', 'Birmingham', 44);
+INSERT INTO `ATP` (`f.no`, `fuleType`, `boilerType`, `boilerCondition`, `isWallMounted`, `bolierAge`, `shouldBoilerLocationChange`, `propertyType`, `bedroomCount`, `radiatorCount`, `isThermostaticRadiatorValvesPresent`, `flueExhaustLocation`, `flueLocation`, `firstName`, `lastName`, `email`, `phone`, `addressLine1`, `city`, `postcode`) VALUES
+(1, 'LPG', 'System', 'Not Working', '1', '[10, 20]', '1', 'Park Home', '4', '2', '1', 'Roof', 'Flat Roof', 'John', 'Doe', 'john.doe@gmail3.com', 1234567890, '1st Lane', 'Birmingham', 44),
+(2, 'LPG', 'System', 'Not Working', '1', '[10, 20]', '1', 'Park Home', '4', '2', '1', 'Roof', 'Flat Roof', 'John', 'Doe', 'john.doe@gmail.com', 1234567890, '1st Lane', 'Birmingham', 44);
 
 -- --------------------------------------------------------
 
@@ -166,6 +163,22 @@ INSERT INTO `users` (`heatingSource`, `isHeatingSourceOld`, `propertyOwnership`,
 --
 ALTER TABLE `admins`
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `ATP`
+--
+ALTER TABLE `ATP`
+  ADD UNIQUE KEY `f.no` (`f.no`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ATP`
+--
+ALTER TABLE `ATP`
+  MODIFY `f.no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1990;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

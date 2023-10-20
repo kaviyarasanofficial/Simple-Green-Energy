@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $fno = $conn->real_escape_string($_POST['fno']);
 
     // Create a SQL query to retrieve values from the database based on the fno
-    $sql = "SELECT * FROM atp WHERE `f.no` = '$fno'";
+    $sql = "SELECT * FROM ATP WHERE `f.no` = '$fno'";
 
     // Execute the query
     $result = $conn->query($sql);
@@ -807,58 +807,197 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <!-- Left Side - 10 Fields -->
                          <div class="col-md-6">
                         
-                        <div class="form-group">
+                         <div class="form-group">
+                            <label>What kind of fuel does your boiler use? *</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="fuleType" name="fuleType" value="<?= $row['fuleType'] ?>">
+                                         <option value="Gas" <?= ($row['fuleType'] === 'Gas') ? 'selected' : '' ?>>Gas</option>
+                                         <option value="LPG" <?= ($row['fuleType'] === 'LPG') ? 'selected' : '' ?>>LPG</option>
+                                         <option value="Oil" <?= ($row['fuleType'] === 'Oil') ? 'selected' : '' ?>>Oil</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
+                        </div>
+
+
+                        <!-- <div class="form-group">
                            <label for="fuleType">Fuel Type</label>
                             <input type="text" class="form-control" id="fuleType" name="fuleType" value="<?= $row['fuleType'] ?>">
-                        </div>
+                        </div> -->
                         <div class="form-group">
-                            <label for="boilerType">Boiler Type</label>
-                            <input type="text" class="form-control" id="boilerType" name="boilerType" value="<?= $row['boilerType']; ?>">
+                            <!-- <label for="boilerType">Boiler Type</label>
+                            <input type="text" class="form-control" id="boilerType" name="boilerType" value="<?= $row['boilerType']; ?>"> -->
+
+                            <label>Currently what type of boiler do you have? *</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="boilerType" name="boilerType" value="<?= $row['boilerType']; ?>">
+                                         <option value="Combi" <?= ($row['boilerType'] === 'Combi') ? 'selected' : '' ?>>Combi</option>
+                                         <option value="Standard" <?= ($row['boilerType'] === 'Standard') ? 'selected' : '' ?>>Standard</option>
+                                         <option value="System" <?= ($row['boilerType'] === 'System') ? 'selected' : '' ?>>System</option>
+                                         <option value="Back Boiler" <?= ($row['boilerType'] === 'Back Boiler') ? 'selected' : '' ?>>Back Boiler</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="boilerCondition">Boiler Condition</label>
-                            <input type="text" class="form-control" id="boilerCondition" name="boilerCondition" value="<?= $row['boilerCondition'] ?>">
+                            <!-- <label for="boilerCondition">Boiler Condition</label>
+                            <input type="text" class="form-control" id="boilerCondition" name="boilerCondition" value="<?= $row['boilerCondition'] ?>"> -->
+
+                            <label>How would you describe your current boiler?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="boilerCondition" name="boilerCondition" value="<?= $row['boilerCondition'] ?>">
+                                         <option value="Not Working" <?= ($row['boilerCondition'] === 'Not Working') ? 'selected' : '' ?>>Not Working</option>
+                                         <option value="Old Inefficient" <?= ($row['boilerCondition'] === 'Old Inefficient') ? 'selected' : '' ?>>Old Inefficient</option>
+                                         <option value="Not fit your requirement" <?= ($row['boilerCondition'] === 'Not fit your requirement') ? 'selected' : '' ?>>Not fit your requirement</option>
+                                         <option value="Other" <?= ($row['boilerCondition'] === 'Other') ? 'selected' : '' ?>>Other</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="isWallMounted">Is Wall Mounted</label>
-                            <input type="text" class="form-control" id="isWallMounted" name="isWallMounted" value="<?= $row['isWallMounted'] ?>">
+                            <!-- <label for="isWallMounted">Is Wall Mounted</label>
+                            <input type="text" class="form-control" id="isWallMounted" name="isWallMounted" value="<?= $row['isWallMounted'] ?>"> -->
+
+                            <label>Is your boiler mounted on the wall?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="isWallMounted" name="isWallMounted" value="<?= $row['isWallMounted'] ?>">
+                                         <option value="Yes, its mounted" <?= ($row['isWallMounted'] === 'Yes, its mounted') ? 'selected' : '' ?>>Yes, its mounted</option>
+                                         <option value="No, its floor standing" <?= ($row['isWallMounted'] === 'No, its floor standing') ? 'selected' : '' ?>>No, its floor standing</option>
+                                         
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="bolierAge">Boiler Age</label>
-                            <input type="text" class="form-control" id="bolierAge" name="bolierAge" value="<?= $row['bolierAge'] ?>">
+                            <!-- <label for="bolierAge">Boiler Age</label>
+                            <input type="text" class="form-control" id="bolierAge" name="bolierAge" value="<?= $row['bolierAge'] ?>"> -->
+                            <label>Roughly how old is your boiler?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="bolierAge" name="bolierAge" value="<?= $row['bolierAge'] ?>">
+                                         <option value="0-10" <?= ($row['bolierAge'] === '0-10') ? 'selected' : '' ?>>0-10</option>
+                                         <option value="10-20" <?= ($row['bolierAge'] === '10-20') ? 'selected' : '' ?>>10-20</option>
+                                         <option value="20-25" <?= ($row['bolierAge'] === '20-25') ? 'selected' : '' ?>>20-25</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
+
                         </div>
                         <div class="form-group">
-                            <label for="shouldBoilerLocationChange">Should Boiler Location Change</label>
-                            <input type="text" class="form-control" id="shouldBoilerLocationChange" name="shouldBoilerLocationChange" value="<?= $row['shouldBoilerLocationChange'] ?>">
+                            <!-- <label for="shouldBoilerLocationChange">Should Boiler Location Change</label>
+                            <input type="text" class="form-control" id="shouldBoilerLocationChange" name="shouldBoilerLocationChange" value="<?= $row['shouldBoilerLocationChange'] ?>"> -->
+
+                            <label>Do you want your new boiler in a different place?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="shouldBoilerLocationChange" name="shouldBoilerLocationChange" value="<?= $row['shouldBoilerLocationChange'] ?>">
+                                         <option value="Yes" <?= ($row['shouldBoilerLocationChange'] === 'Yes') ? 'selected' : '' ?>>Yes</option>
+                                         <option value="No" <?= ($row['shouldBoilerLocationChange'] === 'No') ? 'selected' : '' ?>>No</option>
+                                         
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="propertyType">Property Type</label>
-                            <input type="text" class="form-control" id="propertyType" name="propertyType" value="<?= $row['propertyType'] ?>">
+                            <!-- <label for="propertyType">Type of property you are applying for?</label>
+                            <input type="text" class="form-control" id="propertyType" name="propertyType" value="<?= $row['propertyType'] ?>"> -->
+                            <label>Type of property you are applying for?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="propertyType" name="propertyType" value="<?= $row['propertyType'] ?>">
+                                         <option value="Detached House" <?= ($row['propertyType'] === 'Detached House') ? 'selected' : '' ?>>Detached House</option>
+                                         <option value="Semi-Detached House" <?= ($row['propertyType'] === 'Semi-Detached House') ? 'selected' : '' ?>>Semi-Detached House</option>
+                                         <option value="Terrace House" <?= ($row['propertyType'] === 'Terrace House') ? 'selected' : '' ?>>Terrace House</option>
+                                         <option value="Bungalow" <?= ($row['propertyType'] === 'Bungalow') ? 'selected' : '' ?>>Bungalow</option>
+                                         <option value="Flat" <?= ($row['propertyType'] === 'Flat') ? 'selected' : '' ?>>Flat</option>
+                                         <option value="Park Home" <?= ($row['propertyType'] === 'Park Home') ? 'selected' : '' ?>>Park Home</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="bedroomCount">Bedroom Count</label>
-                            <input type="text" class="form-control" id="bedroomCount" name="bedroomCount" value="<?= $row['bedroomCount'] ?>">
+                            <!-- <label for="bedroomCount">Bedroom Count</label>
+                            <input type="text" class="form-control" id="bedroomCount" name="bedroomCount" value="<?= $row['bedroomCount'] ?>"> -->
+
+                            <label>How many bedrooms does the property have? </label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="bedroomCount" name="bedroomCount" value="<?= $row['bedroomCount'] ?>">
+                                         <option value="1 Bedroom" <?= ($row['bedroomCount'] === '1 Bedroom') ? 'selected' : '' ?>>1 Bedroom</option>
+                                         <option value="2 Bedrooms" <?= ($row['bedroomCount'] === '2 Bedrooms') ? 'selected' : '' ?>>2 Bedrooms</option>
+                                         <option value="3 Bedrooms" <?= ($row['bedroomCount'] === '3 Bedrooms') ? 'selected' : '' ?>>3 Bedrooms</option>
+                                         <option value="4 Bedrooms" <?= ($row['bedroomCount'] === '4 Bedrooms') ? 'selected' : '' ?>>4 Bedrooms</option>
+                                         <option value="5 Bedrooms" <?= ($row['bedroomCount'] === '5 Bedrooms') ? 'selected' : '' ?>>5 Bedrooms</option>
+                                         <option value="6+ Bedrooms" <?= ($row['bedroomCount'] === '6+ Bedrooms') ? 'selected' : '' ?>>6+ Bedrooms</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="radiatorCount">Radiator Count</label>
-                            <input type="text" class="form-control" id="radiatorCount" name="radiatorCount" value="<?= $row['radiatorCount'] ?>">
+                            <!-- <label for="radiatorCount">Radiator Count</label>
+                            <input type="text" class="form-control" id="radiatorCount" name="radiatorCount" value="<?= $row['radiatorCount'] ?>"> -->
+
+                            <label>How many bedrooms does the property have? </label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="radiatorCount" name="radiatorCount" value="<?= $row['radiatorCount'] ?>">
+                                         <option value="1" <?= ($row['radiatorCount'] === '1') ? 'selected' : '' ?>>1</option>
+                                         <option value="2" <?= ($row['radiatorCount'] === '2') ? 'selected' : '' ?>>2</option>
+                                         <option value="3" <?= ($row['radiatorCount'] === '3') ? 'selected' : '' ?>>3</option>
+                                         <option value="4" <?= ($row['radiatorCount'] === '4') ? 'selected' : '' ?>>4</option>
+                                         <option value="5" <?= ($row['radiatorCount'] === '5') ? 'selected' : '' ?>>5</option>
+                                         <option value="6" <?= ($row['radiatorCount'] === '6') ? 'selected' : '' ?>>6</option>
+                                         <option value="7" <?= ($row['radiatorCount'] === '7') ? 'selected' : '' ?>>7</option>
+                                         <option value="8" <?= ($row['radiatorCount'] === '8') ? 'selected' : '' ?>>8</option>
+                                         <option value="9" <?= ($row['radiatorCount'] === '9') ? 'selected' : '' ?>>9</option>
+                                         <option value="10" <?= ($row['radiatorCount'] === '10') ? 'selected' : '' ?>>10</option>
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="isThermostaticRadiatorValvesPresent">Is Thermostatic Radiator Valves Present</label>
-                            <input type="text" class="form-control" id="isThermostaticRadiatorValvesPresent" name="isThermostaticRadiatorValvesPresent" value="<?= $row['isThermostaticRadiatorValvesPresent'] ?>">
+                            <!-- <label for="isThermostaticRadiatorValvesPresent">Is Thermostatic Radiator Valves Present</label>
+                            <input type="text" class="form-control" id="isThermostaticRadiatorValvesPresent" name="isThermostaticRadiatorValvesPresent" value="<?= $row['isThermostaticRadiatorValvesPresent'] ?>"> -->
+
+                            <label>Do you have thermostatic radiator valves?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="isThermostaticRadiatorValvesPresent" name="isThermostaticRadiatorValvesPresent" value="<?= $row['isThermostaticRadiatorValvesPresent'] ?>">
+                                         <option value="Yes" <?= ($row['isThermostaticRadiatorValvesPresent'] === 'Yes') ? 'selected' : '' ?>>Yes</option>
+                                         <option value="No" <?= ($row['isThermostaticRadiatorValvesPresent'] === 'No') ? 'selected' : '' ?>>No</option>
+                                         
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                        </div>
 
                         <!-- Right Side - 10 Fields -->
                        <div class="col-md-6">
                         <div class="form-group">
-                            <label for="flueExhaustLocation">Flue Exhaust Location</label>
-                            <input type="text" class="form-control" id="flueExhaustLocation" name="flueExhaustLocation" value="<?= $row['flueExhaustLocation'] ?>">
+                            <!-- <label for="flueExhaustLocation">Flue Exhaust Location</label>
+                            <input type="text" class="form-control" id="flueExhaustLocation" name="flueExhaustLocation" value="<?= $row['flueExhaustLocation'] ?>"> -->
+
+                            <label>Where does your Flue come out? </label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="flueExhaustLocation" name="flueExhaustLocation" value="<?= $row['flueExhaustLocation'] ?>">
+                                         <option value="Roof" <?= ($row['flueExhaustLocation'] === 'Roof') ? 'selected' : '' ?>>Roof</option>
+                                         <option value="Wall" <?= ($row['flueExhaustLocation'] === 'Wall') ? 'selected' : '' ?>>Wall</option>
+                                         
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="flueLocation">Flue Location</label>
-                            <input type="text" class="form-control" id="flueLocation" name="flueLocation" value="<?= $row['flueLocation'] ?>">
+                            <!-- <label for="flueLocation">Flue Location</label>
+                            <input type="text" class="form-control" id="flueLocation" name="flueLocation" value="<?= $row['flueLocation'] ?>"> -->
+
+
+                            <label>Is your flue on a sloped roof or flat roof or wall?</label>
+                                <div class="icon-addon addon-md input-left-icon">
+                                     <select class="form-control" id="flueLocation" name="flueLocation" value="<?= $row['flueLocation'] ?>">
+                                         <option value="Sloped Roof" <?= ($row['flueLocation'] === 'Sloped Roof') ? 'selected' : '' ?>>Sloped Roof</option>
+                                         <option value="Flat Roof" <?= ($row['flueLocation'] === 'Flat Roof') ? 'selected' : '' ?>>Flat Roof</option>
+                                         <option value="Wall" <?= ($row['flueLocation'] === 'Wall') ? 'selected' : '' ?>>Wall</option>
+                                         
+                                     </select>
+                                     <label class="ti-reload" title="email"></label>
+                                </div>
                         </div>
                         <div class="form-group">
                             <label for="firstName">First Name</label>

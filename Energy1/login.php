@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'rectubmx_simplegreen');
 define('DB_PASSWORD', '3N2h0DEwaDJ#');
