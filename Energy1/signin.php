@@ -41,7 +41,7 @@
                 <select id="redirectSelect" name="redirectOption" class="form-control custom-dropdown" style="width: 150px;">
                     <option selected>Select User</option>
                     <option value="login.php">Admin</option>
-                    <option value="customer_login.php">Customer</option>
+                    <option value="Customer/customer_login.php">Customer</option>
                     <option value="teamlogin.php">Surveyors</option>
                     <option value="teamlogin.php">Gas Engineers</option>
                     <option value="teamlogin.php">Installation Team</option>

@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 // Include the "ead.php" file
 include('php/atpleads.php');
 ?>
@@ -163,7 +161,7 @@ include('php/atpleads.php');
                                             <li><a href="labels-badges-alerts.php"><i class="fa fa-exclamation"></i>labels, Badges, Alerts</a></li>
                                             <li><a href="charts_flot.php"><i class="fa fa-area-chart"></i>Flot Chart</a></li>
                                             <li><a href="charts_Js.php"><i class="fa fa-bar-chart"></i>ATP</a></li>
-                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Morris Charts</a></li>
+                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Documents History</a></li>
                                             <li><a href="charts_sparkline.php"><i class="fa fa-line-chart"></i>Sparkline Charts</a></li>
                                             <li><a href="maps_data.php"><i class="fa fa-map-marker"></i>Data Maps</a></li>
                                         </ul>
@@ -432,7 +430,7 @@ include('php/atpleads.php');
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li class="active"><a href="charts_Js.php">ATP</a></li>
-                                <li><a href="charts_morris.php">Morris Charts</a></li>
+                                <li><a href="charts_morris.php">Documents History</a></li>
                                 <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
                                 <li><a href="charts_am.php">Am Charts</a></li>
                             </ul>
@@ -808,6 +806,8 @@ include('php/atpleads.php');
                                                 <th>City</th>
                                                 <th>Postcode</th>
                                                 <th>Update</th>
+                                                <th>Request Document Notify</th>
+                                                <th>Status of Lead</th>
                                             </tr>
                                         </thead>
                                             <tbody>
@@ -843,7 +843,12 @@ include('php/atpleads.php');
                                                             <button onclick="confirmDelete(<?= $record['f.no'] ?>)" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Delete">
                                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                             </button>
-                                                        </td></tr>
+                                                        </td>
+                                                        <td ><button type="button" class="btn btn-primary notify-button" data-email="<?= $record["email"] ?>" data-record-id="<?= $record["f.no"] ?>">Notify</button></td>
+                                                        <td class="td1">
+                                                        <button type="button" class="btn btn-primary statusapprove-button" data-email="<?= $record["email"] ?>" data-record-id="<?= $record["f.no"] ?>">Approve</button>
+                                                        <button type="button" class="btn btn-warning status-button" data-email="<?= $record["email"] ?>" data-record-id="<?= $record["f.no"] ?>">Reject</button></td>
+                                                    </tr>
                                              <?php endforeach; ?>
                                             </tbody>
                                         </table>
@@ -861,9 +866,134 @@ include('php/atpleads.php');
     </div>
 </div>
 
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.notify-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const email = this.getAttribute('data-email');
+                    const recordId = this.getAttribute('data-record-id');
+
+                    if (this.innerText === 'Notify') {
+                        // Change button text to "Notified" and disable it
+                        this.innerText = 'Notified';
+                        this.classList.remove('btn-primary');
+                        this.classList.add('btn-info');
+                        this.disabled = true;
+
+                        // Send an AJAX request to a PHP script to send the email
+                        sendEmail(email, recordId);
+                    }
+                });
+            });
+
+            function sendEmail(email, recordId) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'requestdocmail.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Handle the response from the PHP script if needed
+                        if (xhr.responseText === "Email sent successfully.") {
+                    Swal.fire("Success!", "Your Email Send", "success");
+                } else {
+                    Swal.fire("Failed!", "Your Email Not Valid", "error");
+                }
+                console.log(xhr.responseText);
+                    }
+                };
+                xhr.send('email=' + email + '&record_id=' + recordId);
+            }
+        });
+    </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.status-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const email = this.getAttribute('data-email');
+                    const recordId = this.getAttribute('data-record-id');
+
+                    if (this.innerText === 'Reject') {
+                        // Change button text to "Notified" and disable it
+                        this.innerText = 'Rejected';
+                        this.classList.remove('btn-primary');
+                        this.classList.add('btn-danger');
+                        this.disabled = true;
+
+                        // Send an AJAX request to a PHP script to send the email
+                        sendEmail(email, recordId);
+                    }
+                });
+            });
+
+            function sendEmail(email, recordId) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'statusleadsmail.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Handle the response from the PHP script if needed
+                        if (xhr.responseText === "Email sent successfully.") {
+                    Swal.fire("Success!", "Your Email Send", "success");
+                } else {
+                    Swal.fire("Failed!", "Your Email Not Valid", "error");
+                }
+                console.log(xhr.responseText);
+                    }
+                };
+                xhr.send('email=' + email + '&record_id=' + recordId);
+            }
+        });
+</script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.statusapprove-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const email = this.getAttribute('data-email');
+                    const recordId = this.getAttribute('data-record-id');
+
+                    if (this.innerText === 'Approve') {
+                        // Change button text to "Notified" and disable it
+                        this.innerText = 'Approved';
+                        this.classList.remove('btn-primary');
+                        this.classList.add('btn-success');
+                        this.disabled = true;
+
+                        // Send an AJAX request to a PHP script to send the email
+                        sendEmail(email, recordId);
+                    }
+                });
+            });
+
+            function sendEmail(email, recordId) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'approveleadmail.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Handle the response from the PHP script if needed
+                        if (xhr.responseText === "Email sent successfully.") {
+                    Swal.fire("Success!", "Your Email Send", "success");
+                } else {
+                    Swal.fire("Failed!", "Your Email Not Valid", "error");
+                }
+                console.log(xhr.responseText);
+                    }
+                };
+                xhr.send('email=' + email + '&record_id=' + recordId);
+            }
+        });
+</script>
 
 
-        <script>
+
+<script>
 function confirmDelete(recordId) {
     Swal.fire({
         title: "Are you sure?",

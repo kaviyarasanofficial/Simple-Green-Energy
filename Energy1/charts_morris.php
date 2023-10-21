@@ -1,3 +1,10 @@
+<?php
+session_start();
+// Include the "ead.php" file
+include('php/historyofdocs.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -21,10 +28,9 @@
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- START PAGE LABEL PLUGINS --> 
-        <link href="assets/plugins/morris/morris.css" rel="stylesheet" type="text/css"/>
-        <!-- START THEME LAYOUT STYLE -->
+        <link href="assets/plugins/modals/modal-component.css" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/dataTables.min.css" rel="stylesheet" type="text/css"/>
         <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -144,7 +150,7 @@
                                             <li><a href="labels-badges-alerts.php"><i class="fa fa-exclamation"></i>labels, Badges, Alerts</a></li>
                                             <li><a href="charts_flot.php"><i class="fa fa-area-chart"></i>Flot Chart</a></li>
                                             <li><a href="charts_Js.php"><i class="fa fa-bar-chart"></i>ATP</a></li>
-                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Morris Charts</a></li>
+                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Documents History</a></li>
                                             <li><a href="charts_sparkline.php"><i class="fa fa-line-chart"></i>Sparkline Charts</a></li>
                                             <li><a href="maps_data.php"><i class="fa fa-map-marker"></i>Data Maps</a></li>
                                         </ul>
@@ -413,7 +419,7 @@
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
-                                <li class="active"><a href="charts_morris.php">Morris Charts</a></li>
+                                <li class="active"><a href="charts_morris.php">Documents History</a></li>
                                 <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
                                 <li><a href="charts_am.php">Am Charts</a></li>
                             </ul>
@@ -743,12 +749,12 @@
                             <i class="pe-7s-graph3"></i>
                         </div>
                         <div class="header-title">
-                            <h1>Morris Charts</h1>
+                            <h1>Documents History</h1>
                             <small>Good looking charts shouldn't be difficult</small>
                             <ol class="breadcrumb">
                                 <li><a href="index.php"><i class="pe-7s-home"></i> Home</a></li>
                                 <li><a href="#">Charts</a></li>
-                                <li class="active">Morris Charts</li>
+                                <li class="active">Documents History</li>
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->
@@ -757,47 +763,31 @@
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <h4>Area Line Graph with Tooltips</h4>
+                                        <h4>DataTables with HTML5 export buttons </h4>
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <div id="morris-area-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="panel panel-bd lobidisable">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <h4>Donut Chart</h4>
+                                    <p class="m-b-15">The Buttons library for DataTables provides a framework with common options and API that can 
+                                        be used with DataTables, but is also very extensible, recognising that you will likely want to use buttons 
+                                        which perform an action unique to your applications. </p>
+                                    <div class="table-responsive">
+                                        <table id="dataTableExample2" class="table table-bordered table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Email</th>
+                                                <th>Document Location</th>
+                                            </tr>
+                                        </thead>
+                                            <tbody>
+                                                <?php foreach ($records as $record): ?>
+                                                    <tr>
+                                                        <td><?= $record["email"] ?></td>
+                                                        <td><a href="<?= $record["location"] ?>" target="_blank"><?= $record["location"] ?></a></td>                                              
+                                                    </tr>
+                                             <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div id="morris-donut-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="panel panel-bd lobidisable">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <h4>Line Graph with Tooltips</h4>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div id="morris-line-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <div class="panel panel-bd lobidisable" data-initial-index="4">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <h4>Bar Graph</h4>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div id="morris-bar-chart"></div>
                                 </div>
                             </div>
                         </div>
@@ -821,6 +811,51 @@
         <!-- START THEME LABEL SCRIPT -->
         <script src="assets/dist/js/app.min.js" type="text/javascript"></script>
         <script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
+
+
+        
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!-- START CORE PLUGINS -->
+<script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/metisMenu/metisMenu.min.js" type="text/javascript"></script>
+<script src="assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+<script src="assets/plugins/animsition/js/animsition.min.js" type="text/javascript"></script>
+<script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+<script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- STRAT PAGE LABEL PLUGINS -->
+<script src="assets/plugins/datatables/dataTables.min.js" type="text/javascript"></script>
+<!-- START THEME LABEL SCRIPT -->
+<script src="assets/dist/js/app.min.js" type="text/javascript"></script>
+<script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+
+        "use strict"; // Start of use strict
+
+        $('#dataTableExample1').DataTable({
+            "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
+            "lengthMenu": [[6, 25, 50, -1], [6, 25, 50, "All"]],
+            "iDisplayLength": 6
+        });
+
+        $("#dataTableExample2").DataTable({
+            dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            buttons: [
+                {extend: 'copy', className: 'btn-sm'},
+                {extend: 'csv', title: 'ExampleFile', className: 'btn-sm'},
+                {extend: 'excel', title: 'ExampleFile', className: 'btn-sm'},
+                {extend: 'pdf', title: 'ExampleFile', className: 'btn-sm'},
+                {extend: 'print', className: 'btn-sm'}
+            ]
+        });
+
+    });
+</script>
     </body>
 
 <!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/charts_morris.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:40:54 GMT -->

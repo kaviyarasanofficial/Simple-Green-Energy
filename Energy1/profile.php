@@ -141,7 +141,7 @@
                                             <li><a href="labels-badges-alerts.php"><i class="fa fa-exclamation"></i>labels, Badges, Alerts</a></li>
                                             <li><a href="charts_flot.php"><i class="fa fa-area-chart"></i>Flot Chart</a></li>
                                             <li><a href="charts_Js.php"><i class="fa fa-bar-chart"></i>ATP</a></li>
-                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Morris Charts</a></li>
+                                            <li><a href="charts_morris.php"><i class="fa fa-pie-chart"></i>Documents History</a></li>
                                             <li><a href="charts_sparkline.php"><i class="fa fa-line-chart"></i>Sparkline Charts</a></li>
                                             <li><a href="maps_data.php"><i class="fa fa-map-marker"></i>Data Maps</a></li>
                                         </ul>
@@ -410,7 +410,7 @@
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
-                                <li><a href="charts_morris.php">Morris Charts</a></li>
+                                <li><a href="charts_morris.php">Documents History</a></li>
                                 <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
                                 <li><a href="charts_am.php">Am Charts</a></li>
                             </ul>
