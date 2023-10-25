@@ -440,8 +440,8 @@
                             <ul class="nav nav-second-level">
                                 <li><a href="forms_basic.php">Basic Surveyor</a></li>
                                 <li><a href="form_input_group.php">Input group</a></li>
-                                <li><a href="form-mask.php">Form Mask</a></li>
-                                <li><a href="form_touchspin.php">Touchspin</a></li>
+                                <li><a href="form-mask.php">Create New Surveyor</a></li>
+                                <li><a href="form_touchspin.php">Surveyor List</a></li>
                                 <li><a href="form_select.php">Select</a></li>
                                 <li><a href="forms_validation.php">Validation Surveyor</a></li>
                                 <li><a href="forms_cropper.php">Cropper</a></li>
@@ -962,6 +962,7 @@
                                                     <th>Job Title</th>
                                                     <th>Started On</th>
                                                     <th data-hide="all">Date of Birth</th>
+                                                    <th data-hide="all">Phone</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -972,6 +973,7 @@
                                                     <td>High School History Teacher</td>
                                                     <td>November 8th 2011</td>
                                                     <td>July 25th 1960</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
@@ -980,6 +982,7 @@
                                                     <td>Wallpaperer Helper</td>
                                                     <td>October 15th 2010</td>
                                                     <td>March 30th 1982</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
@@ -988,6 +991,7 @@
                                                     <td>Internal Medicine Nurse Practitioner</td>
                                                     <td>November 28th 2013</td>
                                                     <td>February 26th 1966</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
@@ -996,6 +1000,7 @@
                                                     <td>Offbearer</td>
                                                     <td>October 31st 2010</td>
                                                     <td>March 29th 1966</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
@@ -1004,6 +1009,7 @@
                                                     <td>Roller Skater</td>
                                                     <td>December 29th 2011</td>
                                                     <td>September 22nd 1964</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
@@ -1012,6 +1018,7 @@
                                                     <td>Clown</td>
                                                     <td>November 12th 2012</td>
                                                     <td>August 4th 1991</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
@@ -1020,6 +1027,7 @@
                                                     <td>Ships Electronic Warfare Officer</td>
                                                     <td>August 14th 2012</td>
                                                     <td>November 20th 1979</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>8</td>
@@ -1028,6 +1036,7 @@
                                                     <td>Technical Services Librarian</td>
                                                     <td>September 21st 2010</td>
                                                     <td>April 7th 1969</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                                 <tr>
                                                     <td>9</td>
@@ -1036,6 +1045,7 @@
                                                     <td>Technical Services Librarian</td>
                                                     <td>September 21st 2010</td>
                                                     <td>April 7th 1969</td>
+                                                    <td>987654321</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>

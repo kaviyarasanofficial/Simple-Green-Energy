@@ -440,8 +440,8 @@
                             <ul class="nav nav-second-level">
                                 <li><a href="forms_basic.php">Basic Surveyor</a></li>
                                 <li><a href="form_input_group.php">Input group</a></li>
-                                <li><a href="form-mask.php">Form Mask</a></li>
-                                <li class="active"><a href="form_touchspin.php">Touchspin</a></li>
+                                <li><a href="form-mask.php">Create New Surveyor</a></li>
+                                <li class="active"><a href="form_touchspin.php">Surveyor List</a></li>
                                 <li><a href="form_select.php">Select</a></li>
                                 <li><a href="forms_validation.php">Validation Surveyor</a></li>
                                 <li><a href="forms_cropper.php">Cropper</a></li>
@@ -741,11 +741,11 @@
                     <div class="content-header">
                         <div class="header-icon"><i class="pe-7s-note2"></i></div>
                         <div class="header-title">
-                            <h1>Bootstrap Touchspin</h1>
+                            <h1>Bootstrap Surveyor List</h1>
                             <small>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.</small>
                             <ol class="breadcrumb">
                                 <li><a href="index.php"><i class="pe-7s-home"></i>Home</a></li>
-                                <li class="active">Touchspin</li>
+                                <li class="active">Surveyor List</li>
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->

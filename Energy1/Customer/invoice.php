@@ -437,8 +437,8 @@
                             <ul class="nav nav-second-level">
                                 <li><a href="forms_basic.php">Basic Surveyor</a></li>
                                 <li><a href="form_input_group.php">Input group</a></li>
-                                <li><a href="form-mask.php">Form Mask</a></li>
-                                <li><a href="form_touchspin.php">Touchspin</a></li>
+                                <li><a href="form-mask.php">Create New Surveyor</a></li>
+                                <li><a href="form_touchspin.php">Surveyor List</a></li>
                                 <li><a href="form_select.php">Select</a></li>
                                 <li><a href="forms_validation.php">Validation Surveyor</a></li>
                                 <li><a href="forms_cropper.php">Cropper</a></li>
