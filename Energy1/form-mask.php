@@ -24,6 +24,7 @@
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
         <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -801,6 +802,7 @@
                                                     <div class="form-group">
                                                         <label class="sr-only" for="f1-email">Email</label>
                                                         <input type="text" name="f1-email" placeholder="Email..." class="form-control" id="f1-email">
+                                                        <div id="email-status"></div> 
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="sr-only" for="f1-password">Password</label>
@@ -837,46 +839,70 @@
                                                 </fieldset>
                                             </form>
                                             <script>
-    function confirmcreateserveyor(event, form) {
-        event.preventDefault(); // Prevent the form from submitting
+                                                    function confirmcreateserveyor(event, form) {
+                                                        event.preventDefault(); // Prevent the form from submitting
 
-        Swal.fire({
-            title: "Are you sure?",
-            text: "Please Confirm to create a new surveyor!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, Create it!",
-            cancelButtonText: "No, cancel plx",
-            allowEnterKey: false,
-            allowEscapeKey: false,
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Send an AJAX request to create the new surveyor
-                $.ajax({
-                    type: "POST",
-                    url: "php/createsurveyor.php",
-                    data: $(form).serialize(), // Serialize the form data
-                    success: function (response) {
-                        if (response === "success") {
-                            Swal.fire("Created!", "New Surveyor Registered Successfully.", "success").then(() => {
-                                location.reload();
-                            });
-                        } else {
-                            Swal.fire("Error", "Failed to Register New Surveyor.", "error");
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.log("AJAX Error: " + error); // Log the error to the console
-                        Swal.fire("Error", "Failed to Register New Surveyor. Please check the console for more details.", "error");
-                    },
-                });
-            }
-        });
-    }
-</script>
+                                                     Swal.fire({
+                                                            title: "Are you sure?",
+                                                            text: "Please Confirm to create a new surveyor!",
+                                                            icon: "warning",
+                                                            showCancelButton: true,
+                                                            confirmButtonColor: "#DD6B55",
+                                                            confirmButtonText: "Yes, Create it!",
+                                                            cancelButtonText: "No, cancel plx",
+                                                            allowEnterKey: false,
+                                                            allowEscapeKey: false,
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                // Send an AJAX request to create the new surveyor
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "php/createsurveyor.php",
+                                                                    data: $(form).serialize(), // Serialize the form data
+                                                                    success: function (response) {
+                                                                        if (response === "success") {
+                                                                            Swal.fire("Created!", "New Surveyor Registered Successfully.", "success").then(() => {
+                                                                                location.reload();
+                                                                            });
+                                                                        } else {
+                                                                            Swal.fire("Error", "Failed to Register New Surveyor.", "error");
+                                                                        }
+                                                                    },
+                                                                    error: function (xhr, status, error) {
+                                                                        console.log("AJAX Error: " + error); // Log the error to the console
+                                                                        Swal.fire("Error", "Failed to Register New Surveyor. Please check the console for more details.", "error");
+                                                                    },
+                                                                });
+                                                            }
+                                                        });
+                                                    }
+                                                </script>
 
+                                                <script>
+                                                $(document).ready(function () {
+                                                    // Add event listeners to the email and password fields
+                                                    $("#f1-email").on("keyup", function () {
+                                                        checkEmailAvailability($(this).val());
+                                                 });
 
+   
+
+                                                    function checkEmailAvailability(email) {
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "php/checkemail.php", // Adjust the URL to your email availability check script
+                                                            data: { email: email },
+                                                            success: function (response) {
+                                                             // Update an element to provide feedback to the user
+                                                                $("#email-status").text(response);
+                                                            },
+                                                            error: function (xhr, status, error) {
+                                                            // Handle errors
+                                                            },
+                                                        });
+                                                    }
+                                                });
+                                                </script>
 
                                         </div>
                                     </div>

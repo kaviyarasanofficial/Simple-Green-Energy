@@ -5,6 +5,7 @@
     <style>
         body {
             text-align: center;
+            background-color: white;
         }
 
         .container {
@@ -16,7 +17,28 @@
         }
 
         #logo {
-            margin-top: 20px;
+            margin-top: 30px;
+            
+        }
+        .logoimg {
+            max-width: 100%;
+            height: 200px;
+            width: 500px;
+            margin-bottom:40px;
+        }
+
+        /* Media query to adjust the logo size for different screen widths */
+        @media (max-width: 768px) {
+            .logoimg {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logoimg {
+                max-width: 100%;
+                height: 100%;
+            }
         }
     </style>
      <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
@@ -31,24 +53,25 @@
 <div class="container">
     <div class="row">
         <div id="logo">
-            <img src="https://sgecrm.rectusmedia.in/assets/dist/img/dark-logo.png" alt="Logo">
+            <img class="logoimg" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" alt="Logo">
         </div>
     </div><br>
 
-    <div class="row mt-4 col-9 text-center">
-        <div class="col-5 mx-auto">
-            <form id="redirectForm" action="index.php" method="post">
-                <select id="redirectSelect" name="redirectOption" class="form-control custom-dropdown" style="width: 150px;">
-                    <option selected>Select User</option>
-                    <option value="login.php">Admin</option>
-                    <option value="Customer/customer_login.php">Customer</option>
-                    <option value="teamlogin.php">Surveyors</option>
-                    <option value="teamlogin.php">Gas Engineers</option>
-                    <option value="teamlogin.php">Installation Team</option>
-                    <option value="teamlogin.php">Insulation Team</option>
-                </select>
-            </form>
-        </div>
+    <div class="row mt-5 col-9 text-center">
+    <div class="col-12 col-md-12 mx-auto ">
+    <form id="redirectForm" action="index.php" method="post">
+        <select id="redirectSelect" name="redirectOption" class="form-control custom-dropdown " style="width: 280px; background-color: #50C878; color: white;">
+            <option selected>Select User</option>
+            <option value="login.php">Admin</option>
+            <option value="Customer/customer_login.php">Customer</option>
+            <option value="teamlogin.php">Surveyors</option>
+            <option value="teamlogin.php">Gas Engineers</option>
+            <option value="teamlogin.php">Installation Team</option>
+            <option value="teamlogin.php">Insulation Team</option>
+        </select>
+    </form>
+</div>
+
     </div>
 </div>
 

@@ -811,7 +811,7 @@ include('php/userleads.php');
                                             <thead>
                                                 <tr>
                                                 <th>F.No</th>
-                                                
+                                                <th>Work Process</th>
                                                 <th>Heating Source</th>
                                                 <th>Is Heating Source Old</th>
                                                 <th>Property Ownership</th>
@@ -839,7 +839,11 @@ include('php/userleads.php');
                                                     <tr>
                                                         
                                                         <td><?= $record["f.no"] ?></td>
-                                                       
+                                                       <td>  <form action="work_process.php" method="post">
+                                                       <input type="hidden" name="fno" value="<?= $record['f.no'] ?>">
+                                                       <button type="submit" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="left" title="Update">
+                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            </button></form></td>
                                                         <td><?= $record["heatingSource"] ?></td>
                                                         <td><?= $record["isHeatingSourceOld"] ?></td>
                                                         <td><?= $record["propertyOwnership"] ?></td>

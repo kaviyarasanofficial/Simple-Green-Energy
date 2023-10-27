@@ -58,7 +58,7 @@ if (!isset($_SESSION['email'])) {
                         <i class="material-icons">apps</i>
                     </button>
                     <a class="navbar-brand" href="customer_index.php">
-                    <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="logo" style="width: 150px; height: 51px;">
+                     <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="logo" style="width: 150px; height: 51px;">
 
                         <!--<span>AdminPage</span>-->
                     </a>
