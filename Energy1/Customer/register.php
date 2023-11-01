@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <form action="https://thememinister.com/adminpage/theme/adminpage_v2.0/index.php" id="loginForm" novalidate>
+                        <form action="https://thememinister.com/adminpage/theme/adminpage_v2.0/customer_index.php" id="loginForm" novalidate>
                             <!--Social Buttons--> 
                             <div class="social">
                                 <strong>Register in using social network:</strong><br>

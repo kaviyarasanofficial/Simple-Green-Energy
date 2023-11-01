@@ -1,7 +1,14 @@
+<?php
+session_start();
+// Include the "ead.php" file
+include('php/get_all_serveyor.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     
-<!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/form_select.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:41:30 GMT -->
+<!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/form_touchspin.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:41:29 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,15 +25,15 @@
                 }
             });
         </script>
+         <link href="assets/plugins/footable-bootstrap/css/footable.core.min.css" rel="stylesheet" type="text/css"/>
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- START PAGE LABEL PLUGINS --> 
-        <link href="assets/plugins/jquery.sumoselect/sumoselect.min.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css"/>
         <!-- START THEME LAYOUT STYLE -->
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,6 +41,54 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+
+                    /* Center the modal */
+#password-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Adjust the max-width as needed */
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #password-modal {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+        </style>
     </head>
     <body>
         <div id="wrapper" class="wrapper animsition">
@@ -45,7 +100,7 @@
                         <i class="material-icons">apps</i>
                     </button>
                     <a class="navbar-brand" href="index.php">
-                        <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="">
+                        <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="">
                         <!--<span>AdminPage</span>-->
                     </a>
                 </div>
@@ -72,9 +127,9 @@
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                               
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -118,7 +173,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -392,11 +447,11 @@
                                 <li><a href="mailbox.php"><i class="ti-email"></i>&nbsp; My Messages</a></li>
                                 <li><a href="lockscreen.php"><i class="ti-lock"></i>&nbsp; Lock Screen</a></li>
                                 <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
-                                <li><a href="login.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
+                                <li><a href="logout.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         <li class="log_out">
-                            <a href="login.php">
+                            <a href="logout.php">
                                 <i class="material-icons">power_settings_new</i>
                             </a>
                         </li><!-- /.Log out -->
@@ -415,47 +470,48 @@
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
                                 <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> -->
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
-                                <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
-                                <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Customers<span class="fa arrow"></span></a>
+                             <ul class="nav nav-second-level">
+                               <li><a href="mailbox.php">User Management<span class="nav-tag green">3</span></a></li>
+                                <!-- <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li> -->
+                                 <!-- <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li> -->
                             </ul>
                         </li>
+                        
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="active">
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li><a href="form-mask.php">Create New Surveyor</a></li>
-                                <li><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li class="active"><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
+                                <li class="active"><a href="form_touchspin.php">Surveyor  Work Deatils</a></li>
+                                <li><a href="form_select.php">Surveyors List</a></li> 
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
                                 <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -495,8 +551,8 @@
                                 <li><a href="icons_pe.php">Pe Icons</a></li>
                                 <li><a href="icon_socicon.php">Socicon Icons</a></li>
                             </ul>
-                        </li>
-                        <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
+                        </li> -->
+                        <!-- <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
                         <li><a href="calender.php"><i class="material-icons">perm_contact_calendar</i>Calendar<span class="nav-tag red">3</span><span class="nav-tag green">5</span><span class="nav-tag yellow">8</span></a></li>
                         <li class="nav-heading "> <span>Extra&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
@@ -541,7 +597,7 @@
                             </ul>
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
-                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
+                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -742,677 +798,65 @@
                     <div class="content-header">
                         <div class="header-icon"><i class="pe-7s-note2"></i></div>
                         <div class="header-title">
-                            <h1>Jquery.sumoselect & select2</h1>
-                            <small>A jQuery Single/Multi Select plugin which can be used on almost any device</small>
+                            <h1>All Surveyor  Work Deatils</h1>
+                            <!-- <small>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.</small> -->
                             <ol class="breadcrumb">
                                 <li><a href="index.php"><i class="pe-7s-home"></i>Home</a></li>
-                                <li class="active">Select</li>
+                                <li class="active">Surveyor  Work Deatils</li>
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12">
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <h4>jquery.sumoselect - Demo</h4>
+                                        <h4>Surveyor Lists </h4>
                                     </div>
                                 </div>
-                                <div class="panel-body p-t-30 p-l-30 p-r-30">
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Single select</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select name="somename" class="testselect1" onclick="console.log($(this).val())" onchange="console.log('change is firing')">
-                                                <option disabled="disabled" selected="selected">disabled selected</option>
-                                                <!--placeholder-->
-                                                <option value="australia">Australia</option>
-                                                <option value="africa">Africa</option>
-                                                <option value="audi">America</option>
-                                                <option title="Volvo is a car"  value="bangladesh">Bangladesh</option>
-                                                <option value="pakistan">Pakistan</option>
-                                                <option value="indonesia">Indonesia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Multiple select</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple"  class="testselect2">
-                                                <option selected value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option disabled="disabled" value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="bmw">BMW</option>
-                                                <option value="porsche">Porche</option>
-                                                <option value="ferrari">Ferrari</option>
-                                                <option class="someclass" value="audi">Audi</option>
-                                                <option class="someclass" value="bmw">BMW</option>
-                                                <option class="someclass" value="porsche">Porche</option>
-                                                <option value="ferrari">Ferrari</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="bmw">BMW</option>
-                                                <option value="porsche">Porche</option>
-                                                <option value="ferrari">Ferrari</option>
-                                                <option value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Optgroup Support</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple" class="optgroup_test">
-                                                <option selected value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option disabled="disabled" value="mercedez">Mercedez</option>
-                                                <optgroup label="US Brands">
-                                                    <option value="chrysler">Chrysler</option>
-                                                    <option value="gm">General Motors</option>
-                                                    <option value="ford">Ford</option>
-                                                    <option disabled="disabled" value="plymouth">Plymouth</option>
-                                                </optgroup>
-                                                <optgroup label="French Brands">
-                                                    <option value="citroen">Citroën</option>
-                                                    <option value="peugeot">Peugeot</option>
-                                                    <option selected value="renault">Renault</option>
-                                                    <option value="nissan">Nissan</option>
-                                                </optgroup>
-                                                <optgroup label="Italian brands">
-                                                    <option value="fiat">Fiat</option>
-                                                    <option value="alpha-Romeo">Alpha Romeo</option>
-                                                    <option value="lamborghini">Lamborghini</option>
-                                                </optgroup>
-                                                <optgroup disabled="disabled" label="German brands">
-                                                    <option value="audi">Audi</option>
-                                                    <option value="bMW">BMW</option>
-                                                    <option value="volkswagen">Volkswagen</option>
-                                                </optgroup>
-                                                <option value="aston-martin">Aston Martin</option>
-                                                <option value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Search Support</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select  class="search_test">
-                                                <option class="hemant" selected value="saab">Saab</option>
-                                                <option class="hemant" value="opel">Opel</option>
-                                                <option disabled="disabled" value="mercedez">Mercedez</option>
-                                                <option value="aston-martin">Aston Martin</option>
-                                                <option value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Search multiple select support</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple" onchange="console.log($(this).children(':selected').length)" class="search_test">
-                                                <option selected value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option disabled="disabled" value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                                <option selected value="bmw">BMW</option>
-                                                <option value="porsche">Porche</option>
-                                                <option value="ferrari">Ferrari</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Search  Optgroup support</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple" class="search_test">
-                                                <option selected value="saab">Saab</option>
-                                                <option value="opel">Opel</option>
-                                                <option disabled="disabled" value="mercedez">Mercedez</option>
-                                                <optgroup label="US Brands">
-                                                    <option value="chrysler">Chrysler</option>
-                                                    <option value="gm">General Motors</option>
-                                                    <option value="ford">Ford</option>
-                                                    <option disabled="disabled" value="plymouth">Plymouth</option>
-                                                </optgroup>
-                                                <optgroup label="French Brands">
-                                                    <option value="citroen">Citroën</option>
-                                                    <option value="peugeot">Peugeot</option>
-                                                    <option selected value="renault">Renault</option>
-                                                    <option value="nissan">Nissan</option>
-                                                </optgroup>
-                                                <optgroup label="Italian brands">
-                                                    <option value="fiat">Fiat</option>
-                                                    <option value="alpha-Romeo">Alpha Romeo</option>
-                                                    <option value="lamborghini">Lamborghini</option>
-                                                </optgroup>
-                                                <optgroup disabled="disabled" label="German brands">
-                                                    <option value="audi">Audi</option>
-                                                    <option value="bMW">BMW</option>
-                                                    <option value="volkswagen">Volkswagen</option>
-                                                </optgroup>
-                                                <option value="aston-martin">Aston Martin</option>
-                                                <option value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Select all one</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple" name="somename4" class="select1">
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option disabled="disabled" value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="bmw">BMW</option>
-                                                <option disabled="disabled" value="porsche">Porche</option>
-                                                <option selected="selected" value="ferrari">Ferrari</option>
-                                                <option selected="selected" value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Select all two</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select multiple="multiple" name="somename4" class="select2">
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option disabled="disabled" value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="bmw">BMW</option>
-                                                <option disabled="disabled" value="porsche">Porche</option>
-                                                <option selected="selected" value="ferrari">Ferrari</option>
-                                                <option  value="hyundai">Hyundai</option>
-                                                <option value="mitsubishi">Mitsubishi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="panel panel-bd lobidrag">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <h4>Select2</h4>
-                                    </div>
-                                </div>
-                                <div class="panel-body p-t-30 p-l-30 p-r-30">
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">The basics</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="form-control basic-single">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Multi-select boxes</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="form-control basic-multiple" multiple="multiple">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Placeholders</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="form-control placeholder-single">
-                                                <option></option>
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Multiple select placeholders</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="form-control placeholder-multiple" multiple="multiple">
-                                                <option></option>
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">RTL support</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="theme-single form-control" dir="rtl" tabindex="-1" style="display: none;">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Multiple languages</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="language form-control">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-6 col-sm-12 col-form-label">Disabled mode</label>
-                                        <div class="col-lg-6 col-md-9 col-sm-12">
-                                            <select class="basic-single js-example-disabled form-control" disabled="disabled">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="WA">Washington</option>
-                                                </optgroup>
-                                                <optgroup label="Mountain Time Zone">
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </optgroup>
-                                                <optgroup label="Central Time Zone">
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                </optgroup>
-                                                <optgroup label="Eastern Time Zone">
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WV">West Virginia</option>
-                                                </optgroup>
-                                            </select>
-                                            <div class="m-t-20">
-                                                <button class="js-programmatic-enable btn btn-primary">Enable</button>
-                                                <button class="js-programmatic-disable btn btn-warning">Disable</button>
-                                            </div>
-                                        </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <input type="text" class="form-control input-sm m-b-15" id="filter" placeholder="Search in table">
+                                        <table id="example1" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+                                            <thead>
+                                                <tr>
+                                                    <th>Full Name</th>
+                                                    <th>Email</th>
+                                                    <th>Status of Work</th>
+                                                    <th>ID Status</th>
+                                                    <th>ID Control</th>
+                                                   <th >Surveyor Phone</th>
+                                                    <th >Password</th>
+                                                    <th >Pwd</th>
+                                                    <th data-hide="all">About Surveyor</th>
+                                                     </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach ($records as $record): ?>
+                                                <tr>
+                                                    <td><?= $record["surveyorname"] ?></td>
+                                                    <td><?= $record["surveyoremail"] ?></td>
+                                                   
+                                                    <td><?= $record["statusofwork"] ?></td>
+                                                   
+                                                    <td><?= $record["idstatus"] ?></td>
+                                                    <td><button class="status-button" data-surveyoremail="<?= $record["surveyoremail"] ?>"><i class="hvr-buzz-out fa fa-lock"></i></button></td>
+                                                    <td><?= $record["surveyorphone"] ?></td>
+                                                    <td><?= $record["password"] ?></td>
+                                                    <td><button class="change-password-button" data-email="<?= $record["surveyoremail"] ?>"><i class="hvr-buzz-out fa fa-key"></i></button></td> 
+                                                    <td><?= $record["about_surveyor"] ?></td>
+                                                    
+                                                </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <ul class="pagination pull-right"></ul>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -1422,7 +866,115 @@
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
         <!-- START CORE PLUGINS -->
-        <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <div id="password-modal" class="modal " style="display: none;">
+    <div class="container modal-content ">
+      <span id="password-modal-close" class="close">&times;</span>
+      <h4>Change Password for <span id="password-modal-email"></span></h4>
+      <input type="password" id="new-password" placeholder="Enter new password">
+      <button id="password-change-button">Change</button>
+    </div>
+  </div>
+
+
+        <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".status-button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function() {
+        const surveyorEmail = this.getAttribute("data-surveyoremail");
+        const statusCell = this.parentElement.previousElementSibling;
+
+        const currentStatus = statusCell.innerText.trim();
+
+        // Toggle the status text
+        const newStatus = currentStatus === "Active" ? "Disable" : "Active";
+        statusCell.innerText = newStatus;
+
+        // Send an AJAX request to update the status in the database
+        const data = new FormData();
+        data.append("surveyorEmail", surveyorEmail);
+        data.append("newStatus", newStatus);
+
+        // Send the AJAX request to a PHP script
+        fetch("php/update_userstatus.php", {
+          method: "POST",
+          body: data
+        })
+        .then(response => response.text())
+        .then(result => {
+          if (result !== "success") {
+            // Revert the status if there was an error
+            statusCell.innerText = currentStatus;
+            alert("Failed to update status.");
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const changePasswordButtons = document.querySelectorAll(".change-password-button");
+    const modal = document.getElementById("password-modal");
+
+    // Hide the modal when the page loads
+    modal.style.display = "none";
+
+    changePasswordButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const email = this.getAttribute("data-email");
+
+        // Display the modal
+        modal.style.display = "block";
+
+        // Set the email in the modal for reference
+        document.getElementById("password-modal-email").textContent = email;
+      });
+    });
+
+    // Close the modal when the close button is clicked
+    document.getElementById("password-modal-close").addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+
+    // Handle the password change request
+    document.getElementById("password-change-button").addEventListener("click", function() {
+      const email = document.getElementById("password-modal-email").textContent;
+      const newPassword = document.getElementById("new-password").value;
+
+      // Send an AJAX request to change the password
+      const data = new FormData();
+      data.append("email", email);
+      data.append("newPassword", newPassword);
+
+      // Send the AJAX request to a PHP script
+      fetch("php/change_surveyorpwd.php", {
+        method: "POST",
+        body: data
+      })
+      .then(response => response.text())
+      .then(result => {
+        if (result === "success") {
+          alert("Password changed successfully.");
+          modal.style.display = "none"; // Hide the modal after changing the password
+        } else {
+          alert("Failed to change password.");
+        }
+      });
+    });
+
+    // Close the modal when clicking outside of the modal content
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
+
+<script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/plugins/metisMenu/metisMenu.min.js" type="text/javascript"></script>
@@ -1431,58 +983,19 @@
         <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
         <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <!-- STRAT PAGE LABEL PLUGINS -->
-        <script src="assets/plugins/jquery.sumoselect/jquery.sumoselect.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/select2/select2.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/footable-bootstrap/js/footable.all.min.js" type="text/javascript"></script>
         <!-- START THEME LABEL SCRIPT -->
         <script src="assets/dist/js/app.min.js" type="text/javascript"></script>
-        <script src="assets/dist/js/jQuery.style.switcher.js" type="text/javascript"></script>
+        <script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
         <script>
-                                                $(document).ready(function () {
-                                                    //jquery.sumoselect
-                                                    $('.testselect1').SumoSelect();
+            $(document).ready(function () {
+                "use strict"; // Start of use strict
+                // Footable example 1
+                $('#example1').footable();
 
-                                                    $('.testselect2').SumoSelect();
-
-                                                    $('.optgroup_test').SumoSelect();
-
-                                                    $('.search_test').SumoSelect({
-                                                        search: true,
-                                                        searchText: 'Enter here.'
-                                                    });
-
-                                                    $('.select1').SumoSelect({okCancelInMulti: true, selectAll: true});
-                                                    $('.select2').SumoSelect({selectAll: true});
-
-                                                    //select2
-                                                    $(".basic-single").select2();
-                                                    $(".basic-multiple").select2();
-                                                    $(".placeholder-single").select2({
-                                                        placeholder: "Select a state",
-                                                        allowClear: true
-                                                    });
-
-                                                    $(".placeholder-multiple").select2({
-                                                        placeholder: "Select a state"
-                                                    });
-
-                                                    $(".theme-single").select2();
-
-                                                    $(".language").select2({
-                                                        language: "es"
-                                                    });
-
-                                                    $(".js-programmatic-enable").on("click", function () {
-                                                        $(".js-example-disabled").prop("disabled", false);
-                                                        $(".js-example-disabled-multi").prop("disabled", false);
-                                                    });
-
-                                                    $(".js-programmatic-disable").on("click", function () {
-                                                        $(".js-example-disabled").prop("disabled", true);
-                                                        $(".js-example-disabled-multi").prop("disabled", true);
-                                                    });
-                                                });
+                // Footable example 2
+                $('#example2').footable();
+            });
         </script>
     </body>
-
-<!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/form_select.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:41:31 GMT -->
 </html>

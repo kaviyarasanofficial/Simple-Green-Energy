@@ -36,17 +36,28 @@ if (!isset($_SESSION['email'])) {
         </script>
         <link href="assets/dist/css/base.css" rel=stylesheet type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="assets/plugins/toastr/toastr.min.css" rel=stylesheet type="text/css"/>
+        <!-- <link href="assets/plugins/toastr/toastr.min.css" rel=stylesheet type="text/css"/> -->
         <link href="assets/plugins/emojionearea/emojionearea.min.css" rel=stylesheet type="text/css"/>
         <link href="assets/plugins/monthly/monthly.min.css" rel=stylesheet type="text/css"/>
         <link href="assets/plugins/amcharts/export.css" rel=stylesheet type="text/css"/>
         <link href="assets/dist/css/component_ui.min.css" rel=stylesheet type="text/css"/>
-        <link id=defaultTheme href="assets/dist/css/skins/skin-dark-1.min.css" rel=stylesheet type="text/css"/>
+        <link id=defaultTheme href="assets/dist/css/skins/skin-default.min" rel=stylesheet type="text/css"/>
         <link href="assets/dist/css/custom.css" rel=stylesheet type="text/css"/>
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+        </style>
+       
     </head>
     <body>
         <div id=wrapper class="wrapper animsition">
@@ -58,6 +69,7 @@ if (!isset($_SESSION['email'])) {
                         <i class="material-icons">apps</i>
                     </button>
                     <a class="navbar-brand" href="index.php">
+                    <!-- <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="logo" style="width: 150px; height: 51px;"> -->
                      <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="logo" style="width: 150px; height: 51px;">
                     <!-- <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="logo" style="width: 150px; height: 51px;"> -->
                         <!--<span>AdminPage</span>-->
@@ -86,9 +98,9 @@ if (!isset($_SESSION['email'])) {
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                               
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -132,7 +144,7 @@ if (!isset($_SESSION['email'])) {
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -429,47 +441,47 @@ if (!isset($_SESSION['email'])) {
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
                                 <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> --> 
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
-                                <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
-                                <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Customers<span class="fa arrow"></span></a>
+                           <ul class="nav nav-second-level">
+                               <li><a href="mailbox.php">User Management<span class="nav-tag green">3</span></a></li>
+                                <!-- <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li> -->
+                                 <!-- <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li> -->
                             </ul>
                         </li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> --> 
                         </li>
-                        <li>
+                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li><a href="form-mask.php">Create New Surveyor</a></li>
-                                <li><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
+                                <li><a href="form_touchspin.php">Surveyor  Work Deatils</a></li>
+                                <li><a href="form_select.php">Surveyors List</a></li> 
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
                                 <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -509,8 +521,8 @@ if (!isset($_SESSION['email'])) {
                                 <li><a href="icons_pe.php">Pe Icons</a></li>
                                 <li><a href="icon_socicon.php">Socicon Icons</a></li>
                             </ul>
-                        </li>
-                        <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
+                        </li> -->
+                        <!-- <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
                         <li><a href="calender.php"><i class="material-icons">perm_contact_calendar</i>Calendar<span class="nav-tag red">3</span><span class="nav-tag green">5</span><span class="nav-tag yellow">8</span></a></li>
                         <li class="nav-heading "> <span>Extra&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
@@ -555,7 +567,7 @@ if (!isset($_SESSION['email'])) {
                             </ul>
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
-                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
+                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -796,7 +808,7 @@ if (!isset($_SESSION['email'])) {
                             </div>
                         </div>
                     </div>
-                    <div class=row>
+                    <!-- <div class=row>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
                             <div class="panel panel-bd ">
                                 <div class=panel-body>
@@ -804,9 +816,9 @@ if (!isset($_SESSION['email'])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class=row>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 ">
+                        <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 ">
                             <div class="panel panel-bd lobidrag">
                                 <div class=panel-heading>
                                     <div class=panel-title>
@@ -818,8 +830,8 @@ if (!isset($_SESSION['email'])) {
                                     <div id=chartdiv2></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        </div> -->
+                        <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <div class="panel panel-bd lobidisable">
                                 <div class=panel-heading>
                                     <div class=panel-title>
@@ -1251,7 +1263,7 @@ if (!isset($_SESSION['email'])) {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

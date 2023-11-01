@@ -8896,13 +8896,13 @@ TextareaInput.prototype.onContextMenu = function (e) {
   display.input.focus()
   if (webkit) { window.scrollTo(null, oldScrollY) }
   display.input.reset()
-  // Adds "Select all" to context menu in FF
+  // Adds "Surveyors List all" to context menu in FF
   if (!cm.somethingSelected()) { te.value = input.prevInput = " " }
   input.contextMenuPending = true
   display.selForContextMenu = cm.doc.sel
   clearTimeout(display.detectingSelectAll)
 
-  // Select-all will be greyed out if there's nothing to select, so
+  // Surveyors List-all will be greyed out if there's nothing to select, so
   // this adds a zero-width space so that we can later check whether
   // it got selected.
   function prepareSelectAllHack() {

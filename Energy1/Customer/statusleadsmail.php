@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: Simple_Green_Energy@gmail.com' . "\r\n";
-        $headers .= 'Reply-To: Simple_Green_Energy@gmail.com' . "\r\n";
+        $headers .= 'From: contactus@simplegreenenergy.org' . "\r\n";
+        $headers .= 'Reply-To: contactus@simplegreenenergy.org' . "\r\n";
         $headers .= 'X-Mailer: PHP/' . phpversion();
 
         if (isset($to) && isset($subject) && isset($message) && isset($headers)) {

@@ -1,3 +1,10 @@
+<?php
+session_start();
+// Include the "ead.php" file
+include('php/get_all_users.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -19,13 +26,15 @@
             });
         </script>
         <!-- START GLOBAL MANDATORY STYLE -->
+        <link href="assets/plugins/footable-bootstrap/css/footable.core.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- START PAGE LABEL PLUGINS --> 
+        <link href="assets/plugins/modals/modal-component.css" rel="stylesheet" type="text/css"/>
         <link href="assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css"/>
         <!-- START THEME LAYOUT STYLE -->
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +42,57 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+
+
+/* Center the modal */
+#password-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Adjust the max-width as needed */
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #password-modal {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+/* Add any additional styling you need */
+
+        </style>
     </head>
     <body>
         <div id="wrapper" class="wrapper animsition">
@@ -44,7 +104,7 @@
                         <i class="material-icons">apps</i>
                     </button>
                     <a class="navbar-brand" href="index.php">
-                        <img class="main-logo" src="assets/dist/img/light-logo.png" alt="">
+                        <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" alt="">
                         <!--<span>AdminPage</span>-->
                     </a>
                 </div>
@@ -71,9 +131,9 @@
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                               
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -117,7 +177,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -391,11 +451,11 @@
                                 <li class="active"><a href="mailbox.php"><i class="ti-email"></i>&nbsp; My Messages</a></li>
                                 <li><a href="lockscreen.php"><i class="ti-lock"></i>&nbsp; Lock Screen</a></li>
                                 <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
-                                <li><a href="login.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
+                                <li><a href="logout.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         <li class="log_out">
-                            <a href="login.php">
+                            <a href="logout.php">
                                 <i class="material-icons">power_settings_new</i>
                             </a>
                         </li><!-- /.Log out -->
@@ -414,47 +474,47 @@
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
                                 <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> -->
                             </ul>
                         </li>
                         <li class="active">
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Customers<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li class="active"><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
-                                <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
-                                <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
+                                <li class="active"><a href="mailbox.php">User Management<span class="nav-tag green">3</span></a></li>
+                                <!-- <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li> -->
+                                 <!-- <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li> -->
                             </ul>
                         </li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
-                        <li>
+                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li><a href="form-mask.php">Create New Surveyor</a></li>
-                                <li><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
+                                <li><a href="form_touchspin.php">Surveyor  Work Deatils</a></li>
+                                <li><a href="form_select.php">Surveyors List</a></li> 
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
                                 <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -494,8 +554,8 @@
                                 <li><a href="icons_pe.php">Pe Icons</a></li>
                                 <li><a href="icon_socicon.php">Socicon Icons</a></li>
                             </ul>
-                        </li>
-                        <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
+                        </li> -->
+                        <!-- <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
                         <li><a href="calender.php"><i class="material-icons">perm_contact_calendar</i>Calendar<span class="nav-tag red">3</span><span class="nav-tag green">5</span><span class="nav-tag yellow">8</span></a></li>
                         <li class="nav-heading "> <span>Extra&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
@@ -540,7 +600,7 @@
                             </ul>
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
-                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
+                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -737,212 +797,70 @@
             <div id="page-wrapper">
                 <!-- main content -->
                 <div class="content">
+                    <!-- Content Header (Page header) -->
+                    <div class="content-header">
+                        <div class="header-icon"><i class="pe-7s-note2"></i></div>
+                        <div class="header-title">
+                            <h1>All Users Deatils</h1>
+                            <!-- <small>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.</small> -->
+                            <ol class="breadcrumb">
+                                <li><a href="index.php"><i class="pe-7s-home"></i>Home</a></li>
+                                <li class="active"> Users</li>
+                            </ol>
+                        </div>
+                    </div> <!-- /. Content Header (Page header) -->
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="mailbox">
-                                <div class="mailbox-header">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="inbox-avatar"><img src="assets/dist/img/user2-160x160.png" class="img-circle border-green" alt="">
-                                                <div class="inbox-avatar-text hidden-xs hidden-sm">
-                                                    <div class="avatar-name">Naeem Khan</div>
-                                                    <div><small>Admin</small></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="inbox-toolbar btn-toolbar">
-                                                <div class="btn-group">
-                                                    <a href="compose.php" class="btn btn-success"><span class="fa fa-pencil-square-o"></span></a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" class="btn btn-default"><span class="fa fa-reply"></span></a>
-                                                    <a href="#" class="hidden-xs hidden-sm btn btn-default"><span class="fa fa-reply-all"></span></a>
-                                                    <a href="#" class="btn btn-default"><span class="fa fa-share"></span></a>
-                                                </div>
-                                                <div class="hidden-xs hidden-sm btn-group">
-                                                    <button type="button" class="text-center btn btn-danger"><span class="fa fa-exclamation"></span></button>
-                                                    <button type="button" class="btn btn-danger"><span class="fa fa-trash"></span></button>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="panel panel-bd lobidrag">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Users List </h4>
                                     </div>
                                 </div>
-                                <div class="mailbox-body">
-                                    <div class="row m-0">
-                                        <div class="col-sm-3 p-0 inbox-nav hidden-xs hidden-sm">
-                                            <div class="mailbox-sideber">
-                                                <div class="profile-usermenu">
-                                                    <h6>Admin</h6>
-                                                    <ul class="nav">
-                                                        <li class="active"><a href="#"><i class="fa fa-inbox"></i>Inbox <small class="label pull-right bg-green">61</small></a></li>
-                                                        <li><a href="compose.php"><i class="fa fa-envelope-o"></i>Send Mail</a></li>
-                                                        <li><a href="#"><i class="fa fa-star-o"></i>Starred</a></li>
-                                                        <li><a href="#"><i class="fa fa-trash-o"></i>Tresh </a></li>
-                                                        <li><a href="#"><i class="fa fa-paperclip"></i>Attachments</a></li>
-                                                    </ul>
-                                                    <h6>Other</h6>
-                                                    <ul class="nav">
-                                                        <li><a href="#"><i class="fa fa-exclamation"></i>Spam</a></li>
-                                                        <li><a href="#"><i class="fa fa-file-text-o"></i>Draft</a></li>
-                                                    </ul>
-                                                    <h6>Tags</h6>
-                                                    <ul class="nav">
-                                                        <li><a href="#"><i class="fa fa-circle color-green"></i>#sometag</a></li>
-                                                        <li><a href="#"><i class="fa fa-circle color-red"></i>#anothertag</a></li>
-                                                        <li><a href="#"><i class="fa fa-circle color-yellow"></i>#anotheronetag</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-9 p-0 inbox-mail">
-                                            <div class="mailbox-content">
-                                                <a href="mailDetails.php" class="inbox_item unread">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-1">
-                                                        </div>
-                                                        <img src="assets/dist/img/avatar.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">PHPClass</div>
-                                                            <div><small><span><strong>Early access: </strong><span> Added a new class: Login Class Fast Site.</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">9:27 AM</div>
-                                                            <div><small>May 27th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-2">
-                                                        </div>
-                                                        <img src="assets/dist/img/drupal-logos.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Drupal Community</div>
-                                                            <div><small><span class="bg-red badge avatar-text">MAGAZINE</span><span><span>Welcome to the Drupal Community</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">12:39 AM</div>
-                                                            <div><small>Apr 15th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item unread">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-4">
-                                                        </div>
-                                                        <img src="assets/dist/img/avatar4.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Terri Rexer, S P N</div>
-                                                            <div><small><span><strong>Early access: </strong><span>Forget Google AdWords: Un-Limited Clicks fo</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">1:45 AM</div>
-                                                            <div><small>Jan 29th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item unread">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-3">
-                                                        </div>
-                                                        <img src="assets/dist/img/linkedin-logo.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">LinkedIn</div>
-                                                            <div><small><span><span>Alireza: Nokia Networks, System Group and.</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">8:56 PM</div>
-                                                            <div><small>Aug 19th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-5">
-                                                        </div>
-                                                        <img src="assets/dist/img/wow-slider-logo.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">WOW Slider </div>
-                                                            <div><small><span>New WOW Slider v7.8 - 67% off</span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">2:45 AM</div>
-                                                            <div><small>Jun 29th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item unread">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-6">
-                                                        </div>
-                                                        <img src="assets/dist/img/avatar.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Slaah Uddin</div>
-                                                            <div><small><span class="bg-green badge avatar-text">SOME LABEL</span><span><strong>Early access: </strong><span>The point of using Lorem Ipsum is that it has ....</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">8:45 AM</div>
-                                                            <div><small>Apr 29th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item unread">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-7">
-                                                        </div>
-                                                        <img src="assets/dist/img/avatar2.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Tahmina Akther</div>
-                                                            <div><small><span><strong>Early access: </strong><span>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">5:45 AM</div>
-                                                            <div><small>Mar 17th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-8">
-                                                        </div>
-                                                        <img src="assets/dist/img/avatar3.png" class="border-violet hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Jordyn Ouellet</div>
-                                                            <div><small><span class="bg-violet badge avatar-text">SOME LABEL</span><span><strong>Early access: </strong><span>Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit.</span></span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">3:45 AM</div>
-                                                            <div><small>Feb 15th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="mailDetails.php" class="inbox_item">
-                                                    <div class="inbox-avatar">
-                                                        <div class="i-check">
-                                                            <input tabindex="9" type="checkbox" id="square-checkbox-9">
-                                                        </div>
-                                                        <img src="assets/dist/img/facebook-logo.png" class="hidden-xs hidden-sm" alt="">
-                                                        <div class="inbox-avatar-text">
-                                                            <div class="avatar-name">Facebook</div>
-                                                            <div><small><span>Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit.</span></small></div>
-                                                        </div>
-                                                        <div class="inbox-date hidden-sm hidden-xs hidden-md">
-                                                            <div class="date">1:45 AM</div>
-                                                            <div><small>Jan 29th</small></div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <input type="text" class="form-control input-sm m-b-15" id="filter" placeholder="Search in table">
+                                        <table id="example1" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+                                            <thead>
+                                            <tr>
+                                                    <th>Full Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Address</th>
+                                                    <th>ID Status</th>
+                                                    <th>ID Control</th>
+                                                   
+                                                    <th >Password</th>
+                                                    <th >Pwd</th>
+                                                    <th data-hide="all">Post Code</th>
+                                                     </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach ($records as $record): ?>
+                                                
+                                                <tr>
+                                                    <td><?= $record["firstName"] ?></td>
+                                                    <td><?= $record["email"] ?></td>
+                                                    <td><?= $record["phone"] ?></td>
+                                                    <td><?= $record["addressLine1"] ?></td>
+                                                    
+                                                    <td><?= $record["idstatus"] ?></td>
+                                                    <td><button class="status-button" data-surveyoremail="<?= $record["email"] ?>"><i class="hvr-buzz-out fa fa-lock"></i></button></td>
+                                                    <td><?= $record["password"] ?></td>
+                                                    <td><button class="change-password-button" data-email="<?= $record["email"] ?>"><i class="hvr-buzz-out fa fa-key"></i></button></td> 
+                                                    <td><?= $record["postcode"] ?></td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                            
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <ul class="pagination pull-right"></ul>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -952,7 +870,117 @@
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
         <!-- START CORE PLUGINS -->
-        <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <div id="password-modal" class="modal " style="display: none;">
+    <div class="container modal-content ">
+      <span id="password-modal-close" class="close">&times;</span>
+      <h4>Change Password for <span id="password-modal-email"></span></h4>
+      <input type="password" id="new-password" placeholder="Enter new password">
+      <button id="password-change-button">Change</button>
+    </div>
+  </div>
+        
+        <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".status-button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function() {
+        const surveyorEmail = this.getAttribute("data-surveyoremail");
+        const statusCell = this.parentElement.previousElementSibling;
+   
+        const currentStatus = statusCell.innerText.trim();
+        console.log(surveyorEmail);
+        // Toggle the status text
+        const newStatus = currentStatus === "Active" ? "Disable" : "Active";
+        statusCell.innerText = newStatus;
+
+        // Send an AJAX request to update the status in the database
+        const data = new FormData();
+        data.append("surveyorEmail", surveyorEmail);
+        data.append("newStatus", newStatus);
+
+        // Send the AJAX request to a PHP script
+        fetch("php/update_userstatus.php", {
+          method: "POST",
+          body: data
+        })
+        .then(response => response.text())
+        .then(result => {
+          if (result !== "success") {
+            // Revert the status if there was an error
+            statusCell.innerText = currentStatus;
+            alert("Failed to update status.");
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const changePasswordButtons = document.querySelectorAll(".change-password-button");
+    const modal = document.getElementById("password-modal");
+
+    // Hide the modal when the page loads
+    modal.style.display = "none";
+
+    changePasswordButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const email = this.getAttribute("data-email");
+
+        // Display the modal
+        modal.style.display = "block";
+
+        // Set the email in the modal for reference
+        document.getElementById("password-modal-email").textContent = email;
+      });
+    });
+
+    // Close the modal when the close button is clicked
+    document.getElementById("password-modal-close").addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+
+    // Handle the password change request
+    document.getElementById("password-change-button").addEventListener("click", function() {
+      const email = document.getElementById("password-modal-email").textContent;
+      const newPassword = document.getElementById("new-password").value;
+
+      // Send an AJAX request to change the password
+      const data = new FormData();
+      data.append("email", email);
+      data.append("newPassword", newPassword);
+
+      // Send the AJAX request to a PHP script
+      fetch("php/change_password.php", {
+        method: "POST",
+        body: data
+      })
+      .then(response => response.text())
+      .then(result => {
+        if (result === "success") {
+          alert("Password changed successfully.");
+          modal.style.display = "none"; // Hide the modal after changing the password
+        } else {
+          alert("Failed to change password.");
+        }
+      });
+    });
+
+    // Close the modal when clicking outside of the modal content
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+
+
+<script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/plugins/metisMenu/metisMenu.min.js" type="text/javascript"></script>
@@ -961,18 +989,20 @@
         <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
         <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <!-- STRAT PAGE LABEL PLUGINS -->
-        <script src="assets/plugins/icheck/icheck.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/footable-bootstrap/js/footable.all.min.js" type="text/javascript"></script>
         <!-- START THEME LABEL SCRIPT -->
         <script src="assets/dist/js/app.min.js" type="text/javascript"></script>
         <script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/modals/classie.js" type="text/javascript"></script>
+        <script src="assets/plugins/modals/modalEffects.js" type="text/javascript"></script>
         <script>
             $(document).ready(function () {
                 "use strict"; // Start of use strict
+                // Footable example 1
+                $('#example1').footable();
 
-                $('.i-check input').iCheck({
-                    checkboxClass: 'icheckbox_square-green',
-                    radioClass: 'iradio_square-green'
-                });
+                // Footable example 2
+                $('#example2').footable();
             });
         </script>
     </body>

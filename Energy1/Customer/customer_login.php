@@ -71,33 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             });
         </script>
-        <style>
-             #logo {
-            margin-top: 4px;
-            text-align: center;  
-            
-        }
-        .logoimg {
-            max-width: 100%;
-            height: 80px;
-            width: 250px;
-            
-        }
-
-        /* Media query to adjust the logo size for different screen widths */
-        @media (max-width: 768px) {
-            .logoimg {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .logoimg {
-                max-width: 100%;
-                height: 100%;
-            }
-        }
-            </style>
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -132,11 +105,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
                     <div class="panel-body">
-                    <div class="row">
-        <div id="logo">
-            <img class="logoimg" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" alt="Logo">
-        </div>
-    </div>
                         <form action="" method="post" id="loginForm" novalidate>
                           
                             <div class="form-group">

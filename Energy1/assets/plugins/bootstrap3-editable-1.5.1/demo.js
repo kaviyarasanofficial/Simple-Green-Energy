@@ -131,7 +131,7 @@ $(document).ready(function () {
         source: countries,
         select2: {
             width: 200,
-            placeholder: 'Select country',
+            placeholder: 'Surveyors List country',
             allowClear: true
         }
     });

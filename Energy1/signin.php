@@ -2,49 +2,52 @@
 <html>
 <head>
     <title>Redirect Example</title>
-    <style>
-        body {
-            text-align: center;
-            background-color: white;
-        }
+   <style>
+    body {
+        text-align: center;
+        background-color: white;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-        #logo {
-            margin-top: 30px;
-            
-        }
+    #logo {
+        margin-top: -20px;
+    }
+
+    .logoimg {
+        max-width: 100%;
+        height: 300px;
+        width: 550px;
+        margin-bottom: 15px;
+    }
+
+    /* Media query to adjust the logo size for different screen widths */
+    @media (max-width: 768px) {
         .logoimg {
-            max-width: 100%;
-            height: 200px;
-            width: 500px;
-            margin-bottom:40px;
+            width: 100%;
+            height: 100%;/* Logo fills the container width */
         }
+    }
 
-        /* Media query to adjust the logo size for different screen widths */
-        @media (max-width: 768px) {
-            .logoimg {
-                max-width: 100%;
-            }
+    @media (max-width: 576px) {
+        .logoimg {
+            width: 90%; /* Logo fills the container width */
+            height: 150px;   /* Maintains the aspect ratio */
         }
+    }
+</style>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        @media (max-width: 576px) {
-            .logoimg {
-                max-width: 100%;
-                height: 100%;
-            }
-        }
-    </style>
      <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -64,7 +67,7 @@
             <option selected>Select User</option>
             <option value="login.php">Admin</option>
             <option value="Customer/customer_login.php">Customer</option>
-            <option value="teamlogin.php">Surveyors</option>
+            <option value="surveyorlogin.php">Surveyors</option>
             <option value="teamlogin.php">Gas Engineers</option>
             <option value="teamlogin.php">Installation Team</option>
             <option value="teamlogin.php">Insulation Team</option>

@@ -3649,7 +3649,7 @@ S2.define('select2/data/tokenizer',[
       var item = self._normalizeItem(data);
 
       // Check if the data object already exists as a tag
-      // Select it if it doesn't
+      // Surveyors List it if it doesn't
       var $existingOptions = self.$element.find('option').filter(function () {
         return $(this).val() === item.id;
       });
@@ -3663,7 +3663,7 @@ S2.define('select2/data/tokenizer',[
         self.addOptions([$option]);
       }
 
-      // Select the item, now that we know there is an option for it
+      // Surveyors List the item, now that we know there is an option for it
       select(item);
     }
 

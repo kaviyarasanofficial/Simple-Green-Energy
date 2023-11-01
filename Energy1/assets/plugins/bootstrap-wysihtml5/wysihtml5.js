@@ -6276,7 +6276,7 @@ rangy.createModule("DomRange", function (api, module) {
                                                         },
 
                                                         /**
-                                                         * Select line where the caret is in
+                                                         * Surveyors List line where the caret is in
                                                          */
                                                         selectLine: function () {
                                                             if (wysihtml5.browser.supportsSelectionModify()) {

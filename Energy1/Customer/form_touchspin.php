@@ -1,3 +1,10 @@
+<?php
+session_start();
+// Include the "ead.php" file
+include('php/get_all_serveyor.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -18,6 +25,7 @@
                 }
             });
         </script>
+         <link href="assets/plugins/footable-bootstrap/css/footable.core.min.css" rel="stylesheet" type="text/css"/>
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,7 +33,7 @@
         <link href="assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css"/>
         <!-- START THEME LAYOUT STYLE -->
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +41,16 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+        </style>
     </head>
     <body>
         <div id="wrapper" class="wrapper animsition">
@@ -43,8 +61,8 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="material-icons">apps</i>
                     </button>
-                    <a class="navbar-brand" href="index.php">
-                        <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="">
+                    <a class="navbar-brand" href="customer_index.php">
+                        <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="">
                         <!--<span>AdminPage</span>-->
                     </a>
                 </div>
@@ -71,9 +89,9 @@
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                               
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -117,7 +135,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -391,11 +409,11 @@
                                 <li><a href="mailbox.php"><i class="ti-email"></i>&nbsp; My Messages</a></li>
                                 <li><a href="lockscreen.php"><i class="ti-lock"></i>&nbsp; Lock Screen</a></li>
                                 <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
-                                <li><a href="login.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
+                                <li><a href="logout.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         <li class="log_out">
-                            <a href="login.php">
+                            <a href="logout.php">
                                 <i class="material-icons">power_settings_new</i>
                             </a>
                         </li><!-- /.Log out -->
@@ -407,54 +425,57 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="nav-heading "> <span>Main Navigation&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
-                        <li><a href="index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
+                        <li><a href="customer_index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Lead Generation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
-                                <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                               <li><a href="charts_morris.php">Documents History</a></li>
+                                <li><a href="form_file_upload.php">Documents Upload here                                    <li><a href="forget_password.php">Forget password</a></li>
+                                <li><a href="lockscreen.php">Lockscreen</a></li></a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> -->
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                        <!-- <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a> -->
+                             <!-- <ul class="nav nav-second-level">
                                 <li><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
                                 <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
                                 <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
-                            </ul>
-                        </li>
+                            </ul> -->
+                       <!-- </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a> -->
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="active">
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li><a href="form-mask.php">Create New Surveyor</a></li>
                                 <li class="active"><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
-                                <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="form_select.php">Select</a></li> -->
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
+                                <!-- <li><a href="form_file_upload.php">Documents Upload here                                    <li><a href="forget_password.php">Forget password</a></li>
+                                <li><a href="lockscreen.php">Lockscreen</a></li></a></li> -->
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -494,8 +515,8 @@
                                 <li><a href="icons_pe.php">Pe Icons</a></li>
                                 <li><a href="icon_socicon.php">Socicon Icons</a></li>
                             </ul>
-                        </li>
-                        <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
+                        </li> -->
+                        <!-- <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
                         <li><a href="calender.php"><i class="material-icons">perm_contact_calendar</i>Calendar<span class="nav-tag red">3</span><span class="nav-tag green">5</span><span class="nav-tag yellow">8</span></a></li>
                         <li class="nav-heading "> <span>Extra&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
@@ -540,7 +561,7 @@
                             </ul>
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
-                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
+                        <li><a href="https://thememinister.com/adminpage/documentation/customer_index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -741,120 +762,70 @@
                     <div class="content-header">
                         <div class="header-icon"><i class="pe-7s-note2"></i></div>
                         <div class="header-title">
-                            <h1>Bootstrap Surveyor List</h1>
-                            <small>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.</small>
+                            <h1>All Surveyor List</h1>
+                            <!-- <small>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.</small> -->
                             <ol class="breadcrumb">
-                                <li><a href="index.php"><i class="pe-7s-home"></i>Home</a></li>
+                                <li><a href="customer_index.php"><i class="pe-7s-home"></i>Home</a></li>
                                 <li class="active">Surveyor List</li>
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->
                     <div class="row">
-                        <div class="col-sm-12 col-md-12">
+                        <div class="col-sm-12">
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <h4>Bootstrap TouchSpin</h4>
+                                        <h4>Surveyor Lists </h4>
                                     </div>
                                 </div>
-                                <form>
-                                    <div class="panel-body">
-                                        <p class="col-sm-12 m-b-20">A mobile and touch friendly input spinner component for Bootstrap 3. It supports
-                                            the<br> mousewheel and the up/down keys.</p>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Example with postfix (large):</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo1" type="text" value="55" name="demo1" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">With prefix:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo2" type="text" value="0" name="demo2" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Vertical button alignment:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo_vertical" type="text" value="" name="demo_vertical" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Vertical custom icons:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo_vertical2" type="text" value="" name="demo_vertical2" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Init with empty value:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo3" type="text" value="" name="demo3" class="form-control">
-                                            </div>
-                                        </div>
-                                        <p class="col-sm-12 m-b-20">The <code>initval</code> setting is only applied when no explicit value is set on 
-                                            the input with the<br> <code>value</code> attribute.</p>
-
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Value attribute is not set:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo3_21" type="text" value="" name="demo3_21" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Value is set explicitly to 33:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo3_22" type="text" value="33" name="demo3_22" class="form-control">
-                                            </div>
-                                        </div>
-                                        <p class="col-sm-12 m-b-20">Size of the whole controller can be set with applying <code>input-sm</code> or <code>input-lg</code> class 
-                                            on the<br> input, or by applying the plugin on an input inside an <code>input-group</code> with the proper size<br>
-                                            class(<code>input-group-sm</code> or <code>input-group-lg</code>).</p>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Button group:</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <div class="input-group">
-                                                    <input id="demo5" type="text" class="form-control" name="demo5" value="50">
-                                                    <div class="input-group-btn">
-                                                        <button type="button" class="btn btn-default">Action</button>
-                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                                            <span class="caret"></span>
-                                                            <span class="sr-only">Toggle Dropdown</span>
-                                                        </button>
-                                                        <ul class="dropdown-menu pull-right" role="menu">
-                                                            <li><a href="#">Action</a></li>
-                                                            <li><a href="#">Another action</a></li>
-                                                            <li><a href="#">Something else here</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Separated link</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Button postfix (small):</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input id="demo4" type="text" value="" name="demo4" class="input-sm form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Button postfix (large):</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <div class="input-group input-group-lg">
-                                                    <input id="demo4_2" type="text" value="" name="demo4_2" class="form-control input-lg">
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <input type="text" class="form-control input-sm m-b-15" id="filter" placeholder="Search in table">
+                                        <table id="example1" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+                                            <thead>
+                                                <tr>
+                                                    <th>Full Name</th>
+                                                    <th>Email</th>
+                                                    <th>New Work Address</th>
+                                                    <th>Work Date&Time</th>
+                                                    <th>Status of Work</th>
+                                                    <th>Work confirmation</th>
+                                                    <th>Upload details</th>
+                                                    <th>Feedback Work</th>
+                                                    <th>ID Status</th>
+                                                   <th data-hide="all">Surveyor Phone</th>
+                                                    <th data-hide="all">Password</th>
+                                                    <th data-hide="all">About Surveyor</th>
+                                                     </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach ($records as $record): ?>
+                                                <tr>
+                                                    <td><?= $record["surveyorname"] ?></td>
+                                                    <td><?= $record["surveyoremail"] ?></td>
+                                                    <td><?= $record["newworkaddress"] ?></td>
+                                                    <td><?= $record["workdatatime"] ?></td>
+                                                    <td><?= $record["statusofwork"] ?></td>
+                                                    <td><?= $record["workconfirmation"] ?></td>
+                                                    <td><?= $record["uploaddetails"] ?></td>
+                                                    <td><?= $record["feedbackwork"] ?></td>
+                                                    <td><?= $record["idstatus"] ?></td>
+                                                    <td><?= $record["surveyorphone"] ?></td>
+                                                    <td><?= $record["password"] ?></td>
+                                                    <td><?= $record["about_surveyor"] ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <ul class="pagination pull-right"></ul>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
                                     </div>
-                                    <div class="panel-footer">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-sm-offset-3">
-                                                <button type="button" class="btn btn-primary w-md m-b-5">Submit</button>
-                                                <button type="button" class="btn btn-default w-md m-b-5">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -871,68 +842,19 @@
         <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
         <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <!-- STRAT PAGE LABEL PLUGINS -->
-        <script src="assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/footable-bootstrap/js/footable.all.min.js" type="text/javascript"></script>
         <!-- START THEME LABEL SCRIPT -->
         <script src="assets/dist/js/app.min.js" type="text/javascript"></script>
-        <script src="assets/dist/js/jQuery.style.switcher.js" type="text/javascript"></script>
+        <script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
         <script>
             $(document).ready(function () {
-                $("input[name='demo1']").TouchSpin({
-                    min: 0,
-                    max: 100,
-                    step: 0.1,
-                    decimals: 2,
-                    boostat: 5,
-                    maxboostedstep: 10,
-                    postfix: '%'
-                });
+                "use strict"; // Start of use strict
+                // Footable example 1
+                $('#example1').footable();
 
-                $("input[name='demo2']").TouchSpin({
-                    min: -1000000000,
-                    max: 1000000000,
-                    stepinterval: 50,
-                    maxboostedstep: 10000000,
-                    prefix: '$'
-                });
-
-                $("input[name='demo_vertical']").TouchSpin({
-                    verticalbuttons: true
-                });
-
-                $("input[name='demo_vertical2']").TouchSpin({
-                    verticalbuttons: true,
-                    verticalupclass: 'glyphicon glyphicon-plus',
-                    verticaldownclass: 'glyphicon glyphicon-minus'
-                });
-
-                $("input[name='demo3']").TouchSpin();
-
-                $("input[name='demo3_21']").TouchSpin({
-                    initval: 40
-                });
-
-                $("input[name='demo3_22']").TouchSpin({
-                    initval: 40
-                });
-
-                $("input[name='demo4']").TouchSpin({
-                    postfix: "a button",
-                    postfix_extraclass: "btn btn-default"
-                });
-
-                $("input[name='demo4_2']").TouchSpin({
-                    postfix: "a button",
-                    postfix_extraclass: "btn btn-default"
-                });
-
-                $("input[name='demo5']").TouchSpin({
-                    prefix: "pre",
-                    postfix: "post"
-                });
-
+                // Footable example 2
+                $('#example2').footable();
             });
         </script>
     </body>
-
-<!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/form_touchspin.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:41:30 GMT -->
 </html>

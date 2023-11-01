@@ -1,0 +1,501 @@
+[28-Oct-2023 11:19:38 America/Chicago] PHP Warning:  Attempt to read property "num_rows" on bool in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/php/atpleads.php on line 25
+[29-Oct-2023 05:07:56 America/Chicago] PHP Warning:  Attempt to read property "num_rows" on bool in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/php/atpleads.php on line 25
+[30-Oct-2023 01:06:48 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:06:48 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:06:48 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:06:48 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:06:48 America/Chicago] PHP Warning:  Array to string conversion in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 32
+[30-Oct-2023 01:07:22 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:07:22 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:07:22 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:07:22 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:09:56 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:09:56 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:09:56 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:09:56 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:10:35 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:10:35 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:10:35 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:10:35 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:12:15 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:12:15 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:12:15 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:12:15 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:13:26 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:13:26 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:13:26 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:13:26 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:13:38 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:13:38 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:13:38 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:13:38 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:13:55 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:13:55 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:13:55 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:13:55 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:14:52 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:14:52 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:14:52 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:14:52 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:15:21 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:15:21 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:15:21 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:15:21 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:15:54 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:15:54 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:15:54 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:15:54 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:16:16 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:16:16 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:16:16 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:16:16 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:48:16 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:48:16 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:48:16 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:48:16 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:54:49 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:54:49 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:54:49 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:54:49 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:58:58 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:58:58 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:58:58 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:58:58 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:58:58 America/Chicago] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php:29
+Stack trace:
+#0 {main}
+  thrown in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 29
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Array to string conversion in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 32
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Undefined variable $userDataJSON in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 845
+[30-Oct-2023 01:59:26 America/Chicago] PHP Warning:  Undefined variable $userDataJSON in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 846
+[30-Oct-2023 02:03:37 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:03:37 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:03:37 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:03:37 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:04:52 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:04:52 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:04:52 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:04:52 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:05:12 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:05:12 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:05:12 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:05:12 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:10:25 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:10:25 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:10:25 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:10:25 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:10:45 America/Chicago] PHP Warning:  Attempt to read property "num_rows" on bool in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/php/atpleads.php on line 25
+[30-Oct-2023 02:11:00 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:11:00 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:11:00 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:11:00 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:15:07 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:15:07 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:15:07 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:15:07 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:17:01 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:17:01 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:17:01 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:17:01 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:17:43 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:17:43 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:17:43 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:17:43 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:18:59 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:18:59 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:18:59 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:18:59 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:28:52 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:28:52 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:28:52 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:28:52 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:29:25 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:29:25 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:29:25 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:29:25 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:30:13 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:30:13 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:30:13 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 12
+[30-Oct-2023 02:30:13 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 13
+[30-Oct-2023 02:43:05 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 02:43:05 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 02:43:05 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:43:05 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:44:07 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 02:44:07 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 02:44:07 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:44:07 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:44:47 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 02:44:47 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 02:44:47 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:44:47 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:45:13 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 02:45:13 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 02:45:13 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:45:13 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 02:49:52 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 02:49:52 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 02:49:52 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 02:49:52 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:02:42 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:02:42 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:02:42 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:02:42 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:03:50 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:03:50 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:03:50 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:03:50 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:05:01 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:05:01 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:05:01 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:05:01 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:06:35 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:06:35 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:06:35 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:06:35 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:08:00 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:08:00 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:08:00 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:08:00 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:11:16 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:11:16 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:11:16 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:11:16 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:18:08 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:18:08 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:18:08 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:18:08 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:23:40 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:23:40 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:23:40 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:23:40 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:25:20 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:25:20 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:25:20 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:25:20 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:27:09 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:27:09 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:27:09 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:27:09 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:28:24 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:28:24 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:28:24 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:28:24 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:29:28 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:29:28 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:29:28 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:29:28 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:31:01 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:31:01 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:31:01 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:31:01 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:38:39 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:38:39 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:38:39 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:38:39 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:41:35 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:41:35 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:41:35 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:41:35 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:43:41 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:43:41 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:43:41 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:43:41 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:44:44 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:44:44 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:44:44 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:44:44 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:45:14 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:45:14 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:45:14 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:45:14 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:49:57 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:49:57 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:49:57 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:49:57 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:52:15 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:52:15 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:52:15 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:52:15 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:52:57 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 03:52:57 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 03:52:57 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 03:52:57 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 03:55:15 America/Chicago] PHP Warning:  Undefined array key "fuleType" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 823
+[30-Oct-2023 03:55:15 America/Chicago] PHP Warning:  Undefined array key "boilerType" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 827
+[30-Oct-2023 03:55:15 America/Chicago] PHP Warning:  Undefined array key "boilerCondition" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 842
+[30-Oct-2023 03:55:15 America/Chicago] PHP Warning:  Undefined array key "isWallMounted" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 856
+[30-Oct-2023 03:55:15 America/Chicago] PHP Warning:  Undefined array key "shouldBoilerLocationChange" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 897
+[30-Oct-2023 04:02:18 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:02:18 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:02:18 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:02:18 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:03:58 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:03:58 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:03:58 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:03:58 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:05:22 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:05:22 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:05:22 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:05:22 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:06:04 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:06:04 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:06:04 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:06:04 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:06:59 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:06:59 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:06:59 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:06:59 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:07:47 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:07:47 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:07:47 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:07:47 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:12:39 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:12:39 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:12:39 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:12:39 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:16:29 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:16:29 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:16:29 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:16:29 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:18:07 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:18:07 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:18:07 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:18:07 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:19:28 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:19:28 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:19:28 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:19:28 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:19:39 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:19:39 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:19:39 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:19:39 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:22:32 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 04:22:32 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 04:22:32 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 04:22:32 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 810
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 810
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 811
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 811
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 812
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 812
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 813
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 813
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 814
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 814
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 823
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 823
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 827
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 827
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 831
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 831
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 832
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 832
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 833
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 833
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 842
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 842
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 846
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 846
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 847
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 847
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 848
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 848
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 856
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 856
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 860
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 860
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 861
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 861
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 862
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 862
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 863
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 863
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 864
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 864
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 865
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 865
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 866
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 866
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 867
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 867
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 868
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 868
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 869
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 869
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 870
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 870
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 871
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 871
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 872
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 872
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 879
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 879
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 882
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 882
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 883
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 883
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 884
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 884
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 885
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 885
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 886
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 886
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 887
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 887
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 888
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 888
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 889
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 889
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 897
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 897
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 901
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 901
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 902
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 902
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 903
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 903
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 904
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 904
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 905
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 905
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 906
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 906
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 907
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 907
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 915
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 915
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 918
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 918
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 919
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 919
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 920
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 920
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 921
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 921
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 929
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 929
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 933
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 933
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 943
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 943
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 947
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 947
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 951
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 951
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 955
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 955
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 959
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 959
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 963
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 963
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 967
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 967
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 971
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 971
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Undefined variable $row in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 975
+[30-Oct-2023 04:56:09 America/Chicago] PHP Warning:  Trying to access array offset on value of type null in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/leadupdate.php on line 975
+[30-Oct-2023 08:36:48 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 08:36:48 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 08:36:48 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 08:36:48 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:13:04 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:13:04 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:13:04 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:13:04 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:14:00 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:14:00 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:14:00 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:14:00 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:17:50 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:17:50 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:17:50 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:17:50 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:21:01 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:21:01 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:21:01 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:21:01 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:40:47 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:40:47 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:40:47 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:40:47 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:41:35 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:41:35 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:41:35 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:41:35 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:45:44 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:45:44 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:45:44 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:45:44 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:50:14 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:50:14 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:50:14 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:50:14 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:51:12 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:51:12 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:51:12 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:51:12 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:51:58 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:51:58 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:51:58 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:51:58 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:54:27 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:54:27 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:54:27 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:54:27 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:54:34 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:54:34 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:54:34 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:54:34 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:54:46 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:54:46 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:54:46 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:54:46 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:54:57 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:54:57 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:54:57 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:54:57 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:55:17 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:55:17 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:55:17 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:55:17 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:55:21 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:55:22 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:55:22 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:55:22 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:55:27 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:55:27 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:55:27 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:55:27 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:55:33 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:55:33 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:55:33 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:55:33 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:55:38 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:55:38 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:55:38 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:55:38 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:57:05 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[30-Oct-2023 09:57:05 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[30-Oct-2023 09:57:05 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[30-Oct-2023 09:57:05 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[30-Oct-2023 09:57:46 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[30-Oct-2023 09:57:46 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[30-Oct-2023 09:59:26 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[30-Oct-2023 09:59:26 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 00:03:27 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 00:03:27 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 00:03:59 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 00:03:59 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 01:11:49 America/Chicago] PHP Warning:  Constant DB_HOST already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 8
+[31-Oct-2023 01:11:49 America/Chicago] PHP Warning:  Constant DB_USERNAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 9
+[31-Oct-2023 01:11:49 America/Chicago] PHP Warning:  Constant DB_PASSWORD already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 10
+[31-Oct-2023 01:11:49 America/Chicago] PHP Warning:  Constant DB_NAME already defined in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/work_process.php on line 11
+[31-Oct-2023 01:56:56 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 01:56:56 America/Chicago] PHP Warning:  Undefined array key "newworkaddress" in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/form_touchspin.php on line 793
+[31-Oct-2023 01:57:06 America/Chicago] PHP Warning:  Attempt to read property "num_rows" on bool in /home1/rectubmx/public_html/sgecrm.rectusmedia.in/php/atpleads.php on line 25

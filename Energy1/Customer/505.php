@@ -40,7 +40,7 @@
                     <div class="error-desc2">
                         <p>The server encountered something unexpected that didn't allow it to complete the request.
                             We apologize. You can go back to main page: </p>
-                        <a href="index.php" class="btn btn-success">Dashboard</a>
+                        <a href="customer_index.php" class="btn btn-success">Dashboard</a>
                     </div>
                 </div>
             </div>

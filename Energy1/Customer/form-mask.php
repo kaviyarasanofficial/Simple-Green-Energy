@@ -21,15 +21,26 @@
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="assets/dist/css/component_ui.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+        </style>
     </head>
     <body>
         <div id="wrapper" class="wrapper animsition">
@@ -40,8 +51,8 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="material-icons">apps</i>
                     </button>
-                    <a class="navbar-brand" href="index.php">
-                        <img class="main-logo" src="assets/dist/img/light-logo.png" id="bg" alt="">
+                    <a class="navbar-brand" href="customer_index.php">
+                        <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" id="bg" alt="">
                         <!--<span>AdminPage</span>-->
                     </a>
                 </div>
@@ -68,9 +79,9 @@
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                               
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -114,7 +125,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -388,11 +399,11 @@
                                 <li><a href="mailbox.php"><i class="ti-email"></i>&nbsp; My Messages</a></li>
                                 <li><a href="lockscreen.php"><i class="ti-lock"></i>&nbsp; Lock Screen</a></li>
                                 <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
-                                <li><a href="login.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
+                                <li><a href="logout.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         <li class="log_out">
-                            <a href="login.php">
+                            <a href="logout.php">
                                 <i class="material-icons">power_settings_new</i>
                             </a>
                         </li><!-- /.Log out -->
@@ -404,54 +415,57 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="nav-heading "> <span>Main Navigation&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
-                        <li><a href="index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
+                        <li><a href="customer_index.php" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">bubble_chart</i> Lead Generation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
-                                <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                               <li><a href="charts_morris.php">Documents History</a></li>
+                                <li><a href="form_file_upload.php">Documents Upload here                                    <li><a href="forget_password.php">Forget password</a></li>
+                                <li><a href="lockscreen.php">Lockscreen</a></li></a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> -->
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                        <!-- <li>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a> -->
+                             <!-- <ul class="nav nav-second-level">
                                 <li><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
                                 <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
                                 <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
-                            </ul>
-                        </li>
+                            </ul> -->
+                       <!-- </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a> -->
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="active">
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li class="active"><a href="form-mask.php">Create New Surveyor</a></li>
                                 <li><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
-                                <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="form_select.php">Select</a></li> -->
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
+                                <!-- <li><a href="form_file_upload.php">Documents Upload here                                    <li><a href="forget_password.php">Forget password</a></li>
+                                <li><a href="lockscreen.php">Lockscreen</a></li></a></li> -->
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -491,8 +505,8 @@
                                 <li><a href="icons_pe.php">Pe Icons</a></li>
                                 <li><a href="icon_socicon.php">Socicon Icons</a></li>
                             </ul>
-                        </li>
-                        <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
+                        </li> -->
+                        <!-- <li><a href="widgets.php"><i class="material-icons">widgets</i>Widgets<span class="nav-tag green">new</span></a></li>
                         <li><a href="calender.php"><i class="material-icons">perm_contact_calendar</i>Calendar<span class="nav-tag red">3</span><span class="nav-tag green">5</span><span class="nav-tag yellow">8</span></a></li>
                         <li class="nav-heading "> <span>Extra&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
@@ -537,7 +551,7 @@
                             </ul>
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
-                        <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
+                        <li><a href="https://thememinister.com/adminpage/documentation/customer_index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -738,173 +752,174 @@
                     <div class="content-header">
                         <div class="header-icon"><i class="pe-7s-note2"></i></div>
                         <div class="header-title">
-                            <h1>jQuery Mask Plugin</h1>
-                            <small>A plugin to make masks on form fields</small>
+                            <h1>Surveyor</h1>
+                            <!-- <small>A plugin to make masks on form fields</small> -->
                             <ol class="breadcrumb">
-                                <li><a href="index.php"><i class="pe-7s-home"></i>Home</a></li>
-                                <li class="active">Form mask</li>
+                                <li><a href="customer_index.php"><i class="pe-7s-home"></i>Home</a></li>
+                                <li class="active">Surveyor</li>
                             </ol>
                         </div>
                     </div> <!-- /. Content Header (Page header) -->
                     <div class="row">
-                        <div class="col-sm-12 col-md-12">
+                        <div class="col-sm-12">
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <h4>jQuery Mask Plugin</h4>
+                                        <!-- <h4>Free Bootstrap Wizard</h4> -->
                                     </div>
                                 </div>
-                                <form>
-                                    <div class="panel-body">
-                                        <div class="form-group row">
-                                            <label for="date" class="col-lg-3 col-sm-12 col-form-label">Date</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="date form-control" id="date"/>
-                                                <small class="text-muted">Custom date format:<code>mm/dd/yyyy</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="time" class="col-lg-3 col-sm-12 col-form-label">Hour</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="time form-control" id="time"/>
-                                                <small class="text-muted">Custom time format:<code>00:00:00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="date_time" class="col-lg-3 col-sm-12 col-form-label">Date &amp; Hour</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="date_time form-control" id="date_time"/>
-                                                <small class="text-muted">Date &amp; Hour format:<code>mm/dd/yyyy & 00:00:00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="cep" class="col-lg-3 col-sm-12 col-form-label">ZIP Code</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="cep form-control" id="cep"/>
-                                                <small class="text-muted">ZIP Code Mask<code>00000-000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="cep_with_callback" class="col-lg-3 col-sm-12 col-form-label">With Callbacks (open console)</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="cep_with_callback form-control" id="cep_with_callback"/>
-                                                <small class="text-muted">With Callbacks (open console) Mask<code>00000-00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="crazy_cep" class="col-lg-3 col-sm-12 col-form-label">Crazy Zip Code</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="crazy_cep form-control" id="crazy_cep"/>
-                                                <small class="text-muted">Crazy Zip Code Mask<code>0-00-00-00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="money" class="col-lg-3 col-sm-12 col-form-label">Money</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="money form-control" id="money"/>
-                                                <small class="text-muted">Money Mask<code>000.000.000.000.000,00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="placeholder" class="col-lg-3 col-sm-12 col-form-label">Mask placeholder option</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="placeholder form-control" id="placeholder"/>
-                                                <small class="text-muted">Placeholder Mask<code>00/00/0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="phone" class="col-lg-3 col-sm-12 col-form-label">Telephone</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="phone form-control" id="phone"/>
-                                                <small class="text-muted">Telephone Mask<code>0000-0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="phone_with_ddd" class="col-lg-3 col-sm-12 col-form-label">Telephone with Code Area</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="phone_with_ddd form-control" id="phone_with_ddd"/>
-                                                <small class="text-muted">Telephone with Code Area Mask<code>(00) 0000-0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="phone_us" class="col-lg-3 col-sm-12 col-form-label">US Telephone</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="phone_us form-control" id="phone_us"/>
-                                                <small class="text-muted">US Telephone Mask<code>(000) 000-0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="sp_celphones" class="col-lg-3 col-sm-12 col-form-label">São Paulo Celphones</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="sp_celphones form-control" id="sp_celphones"/>
-                                                <!--<small class="text-muted">São Paulo Celphones Mask<code>(000) 000-0000</code></small>-->
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="mixed" class="col-lg-3 col-sm-12 col-form-label">Mixed Type Mask</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="mixed form-control" id="mixed"/>
-                                                <small class="text-muted">Mixed Type Mask<code>AAA 000-S0S</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="cpf" class="col-lg-3 col-sm-12 col-form-label">CPF</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="cpf form-control" id="cpf"/>
-                                                <small class="text-muted">CPF Mask<code>000.000.000-00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="cnpj" class="col-lg-3 col-sm-12 col-form-label">CNPJ</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="cnpj form-control" id="cnpj"/>
-                                                <small class="text-muted">CNPJ Mask<code>00.000.000/0000-00</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="ip_address" class="col-lg-3 col-sm-12 col-form-label">IP Address</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="ip_address form-control" id="ip_address"/>
-                                                <small class="text-muted">IP Address Mask<code>0ZZ.0ZZ.0ZZ.0ZZ</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="clear-if-not-match" class="col-lg-3 col-sm-12 col-form-label">With Clear If Not Match Option</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="clear-if-not-match form-control" id="clear-if-not-match"/>
-                                                <small class="text-muted">With Clear If Not Match Option Mask<code>00/00/0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="fallback" class="col-lg-3 col-sm-12 col-form-label">With a fallback digit</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="fallback form-control" id="fallback"/>
-                                                <small class="text-muted">With a fallback digit mask<code>00r00r0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="selectonfocus" class="col-lg-3 col-sm-12 col-form-label">With selectOnFocus</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <input type="text" class="selectonfocus form-control" id="selectonfocus"/>
-                                                <small class="text-muted">With selectOnFocus mask<code>00/00/0000</code></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-3 col-sm-12 col-form-label">Masks on div elements!</label>
-                                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                                <div class="mask-on-div">12345678909</div> <input type="button" class="bt-mask-it btn btn-inverse" value="Mask it!"/>
-                                            </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                                            <form method="" class="f1">
+                                                <h3 class="m-t-0">Create New Surveyor</h3>
+                                                <p>Fill in the form to get instant access</p>
+                                                <div class="f1-steps">
+                                                    <div class="f1-progress">
+                                                        <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                                                    </div>
+                                                    <div class="f1-step active">
+                                                        <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                                                        <p>about</p>
+                                                    </div>
+                                                    <div class="f1-step">
+                                                        <div class="f1-step-icon"><i class="fa fa-key"></i></div>
+                                                        <p>account</p>
+                                                    </div>
+                                                    <div class="f1-step">
+                                                        <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
+                                                        <p>details</p>
+                                                    </div>
+                                                </div>
+                                                <fieldset>
+                                                    <h4 class="m-t-0">Tell us who you are:</h4>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-first-name">Full name</label>
+                                                        <input type="text" name="f1-full-name" placeholder="Full name..." class="form-control" id="f1-first-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-last-name">Phone Number</label>
+                                                        <input type="number" name="f1-phone" placeholder="Phone Number..." class="form-control" id="f1-last-name">
+                                                    </div>
+                                                    <!-- <div class="form-group">
+                                                        <label class="sr-only" for="f1-about-yourself">About yourself</label>
+                                                        <textarea name="f1-about-yourself" placeholder="About yourself..." 
+                                                                  class="form-control" id="f1-about-yourself" rows="5"></textarea>
+                                                    </div> -->
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn btn-success btn-next">Next</button>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <h4>Set up your account:</h4>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-email">Email</label>
+                                                        <input type="text" name="f1-email" placeholder="Email..." class="form-control" id="f1-email">
+                                                        <div id="email-status"></div> 
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-password">Password</label>
+                                                        <input type="password" name="f1-password" placeholder="Password..." class="form-control" id="f1-password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-repeat-password">Repeat password</label>
+                                                        <input type="password" name="f1-repeat-password" placeholder="Repeat password..." 
+                                                               class="form-control" id="f1-repeat-password">
+                                                    </div>
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn btn-previous">Previous</button>
+                                                        <button type="button" class="btn btn-success btn-next">Next</button>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <h4>About</h4>
+                                                    <!-- <div class="form-group">
+                                                        <label class="sr-only" for="f1-facebook">Facebook</label>
+                                                        <input type="text" name="f1-facebook" placeholder="Facebook..." class="form-control" id="f1-facebook">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-twitter">Twitter</label>
+                                                        <input type="text" name="f1-twitter" placeholder="Twitter..." class="form-control" id="f1-twitter">
+                                                    </div> -->
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-details">About Surveyor</label>
+                                                        <input type="text" name="f1-details" placeholder="details..." class="form-control" >
+                                                    </div>
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn btn-previous">Previous</button>
+                                                        <button type="button" onclick="confirmcreateserveyor(event, this.form)" class="btn btn-success btn-submit">Submit</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <script>
+                                                    function confirmcreateserveyor(event, form) {
+                                                        event.preventDefault(); // Prevent the form from submitting
+
+                                                     Swal.fire({
+                                                            title: "Are you sure?",
+                                                            text: "Please Confirm to create a new surveyor!",
+                                                            icon: "warning",
+                                                            showCancelButton: true,
+                                                            confirmButtonColor: "#DD6B55",
+                                                            confirmButtonText: "Yes, Create it!",
+                                                            cancelButtonText: "No, cancel plx",
+                                                            allowEnterKey: false,
+                                                            allowEscapeKey: false,
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                // Send an AJAX request to create the new surveyor
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "php/createsurveyor.php",
+                                                                    data: $(form).serialize(), // Serialize the form data
+                                                                    success: function (response) {
+                                                                        if (response === "success") {
+                                                                            Swal.fire("Created!", "New Surveyor Registered Successfully.", "success").then(() => {
+                                                                                location.reload();
+                                                                            });
+                                                                        } else {
+                                                                            Swal.fire("Error", "Failed to Register New Surveyor.", "error");
+                                                                        }
+                                                                    },
+                                                                    error: function (xhr, status, error) {
+                                                                        console.log("AJAX Error: " + error); // Log the error to the console
+                                                                        Swal.fire("Error", "Failed to Register New Surveyor. Please check the console for more details.", "error");
+                                                                    },
+                                                                });
+                                                            }
+                                                        });
+                                                    }
+                                                </script>
+
+                                                <script>
+                                                $(document).ready(function () {
+                                                    // Add event listeners to the email and password fields
+                                                    $("#f1-email").on("keyup", function () {
+                                                        checkEmailAvailability($(this).val());
+                                                 });
+
+   
+
+                                                    function checkEmailAvailability(email) {
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "php/checkemail.php", // Adjust the URL to your email availability check script
+                                                            data: { email: email },
+                                                            success: function (response) {
+                                                             // Update an element to provide feedback to the user
+                                                                $("#email-status").text(response);
+                                                            },
+                                                            error: function (xhr, status, error) {
+                                                            // Handle errors
+                                                            },
+                                                        });
+                                                    }
+                                                });
+                                                </script>
+
                                         </div>
                                     </div>
-                                    <div class="panel-footer">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-sm-offset-3">
-                                                <button type="button" class="btn btn-primary w-md m-b-5">Submit</button>
-                                                <button type="button" class="btn btn-default w-md m-b-5">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -912,6 +927,7 @@
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
         <!-- START CORE PLUGINS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -921,11 +937,11 @@
         <script src="assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
         <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <!-- STRAT PAGE LABEL PLUGINS -->
-        <script src="assets/plugins/jQuery-mask-plugin/jquery.mask.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/jQuery-mask-plugin/examples.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-wizard/jquery.backstretch.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-wizard/form.scripts.js" type="text/javascript"></script>
         <!-- START THEME LABEL SCRIPT -->
         <script src="assets/dist/js/app.min.js" type="text/javascript"></script>
-        <script src="assets/dist/js/jQuery.style.switcher.js" type="text/javascript"></script>
+        <script src="assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
     </body>
 
 <!-- Mirrored from thememinister.com/adminpage/theme/adminpage_v2.0/form-mask.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Oct 2023 10:41:29 GMT -->

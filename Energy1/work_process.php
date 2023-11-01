@@ -1,8 +1,49 @@
 <?php
+error_reporting(E_ERROR | E_PARSE); 
 // Include the "ead.php" file
 include('php/get_avail_serveyor.php');
 
 $fno = $_POST['fno'];
+
+
+ define('DB_HOST', 'localhost');
+    define('DB_USERNAME', 'rectubmx_simplegreen');
+    define('DB_PASSWORD', '3N2h0DEwaDJ#');
+    define('DB_NAME', 'rectubmx_simplegreenenergy');
+    
+    
+    
+    // Establish a database connection
+    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+
+    // Sanitize the fno value and avoid SQL injection
+    $fno = $conn->real_escape_string($_POST['fno']);
+
+    // Create a SQL query to retrieve values from the database based on the fno
+    $sql = "SELECT * FROM users WHERE `f.no` = '$fno'";
+
+    // Execute the query
+    $result = $conn->query($sql);
+
+    if ($result) {
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            // Now $row contains the retrieved values from the database
+        } else {
+            echo "No records found.";
+        }
+    } else {
+        echo "Query failed: " . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+
 ?>
 
 
@@ -47,6 +88,7 @@ $fno = $_POST['fno'];
   'opsz' 24
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
         .notification-icon {
             cursor: pointer;
@@ -59,7 +101,7 @@ $fno = $_POST['fno'];
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/plugins/datatables/dataTables.min.css" rel="stylesheet" type="text/css"/>
-        <link id="defaultTheme" href="assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
+        <link id="defaultTheme" href="assets/dist/css/skins/skin-default.min" rel="stylesheet" type="text/css"/>
         <link href="assets/dist/css/custom.css" rel="stylesheet" type="text/css"/>
 
 
@@ -76,6 +118,16 @@ $fno = $_POST['fno'];
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            @media (max-width: 767px) {
+                    .navbar-header {
+                background-color: #ffffff;
+                }
+                .navbar-toggle{
+                 color: black;
+                }
+                    }
+        </style>
     </head>
     <body>
         <div id="wrapper" class="wrapper animsition">
@@ -87,7 +139,7 @@ $fno = $_POST['fno'];
                         <i class="material-icons">apps</i>
                     </button>
                     <a class="navbar-brand" href="index.php">
-                        <img class="main-logo" src="assets/dist/img/light-logo.png" alt="">
+                        <img class="main-logo" src="https://www.simplegreenenergy.org/wp-content/uploads/2021/06/SimpleGreenEnergy_FinalLogo.png" alt="">
                         <!--<span>AdminPage</span>-->
                     </a>
                 </div>
@@ -114,9 +166,9 @@ $fno = $_POST['fno'];
                         <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li>
                         <!-- /.Sidebar menu toggle icon -->
                         <!--Start dropdown menu-->
-                        <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <!-- <li class="dropdown hidden-sm"><a href="#" class="dropdown-toggle material-ripple" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <!--<li class="ui_popover_tooltip"></li>-->
+                              
                                 <li><a href="#">Dropdown Link 1</a></li>
                                 <li><a href="#">Dropdown Link 2</a></li>
                                 <li><a href="#">Dropdown Link 3</a></li>
@@ -160,7 +212,7 @@ $fno = $_POST['fno'];
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!--End Start dropdown menu-->
                         <!--Start dropdown mega menu-->
                         <li class="dropdown mega-dropdown hidden-sm">
@@ -434,7 +486,7 @@ $fno = $_POST['fno'];
                                 <li><a href="mailbox.php"><i class="ti-email"></i>&nbsp; My Messages</a></li>
                                 <li><a href="lockscreen.php"><i class="ti-lock"></i>&nbsp; Lock Screen</a></li>
                                 <li><a href="#"><i class="ti-settings"></i>&nbsp; Settings</a></li>
-                                <li><a href="login.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
+                                <li><a href="logout.php"><i class="ti-layout-sidebar-left"></i>&nbsp; Logout</a></li>
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         <li class="log_out">
@@ -457,47 +509,47 @@ $fno = $_POST['fno'];
                                 <li class="active"><a href="charts_flot.php">Leads</a></li>
                                 <li><a href="charts_Js.php">ATP</a></li>
                                 <li><a href="charts_morris.php">Documents History</a></li>
-                                <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
-                                <li><a href="charts_am.php">Am Charts</a></li>
+                                <!-- <li><a href="charts_sparkline.php">Sparkline Charts</a></li>
+                                <li><a href="charts_am.php">Am Charts</a></li> -->
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Admin<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="mailbox.php">Admin<span class="nav-tag green">3</span></a></li>
-                                <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li>
-                                <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li>
-                            </ul>
+                            <a href="#" class="material-ripple"><i class="material-icons">drafts</i> Customers<span class="fa arrow"></span></a>
+                             <!-- <ul class="nav nav-second-level">
+                               <li><a href="mailbox.php">User Management<span class="nav-tag green">3</span></a></li>
+                                <!-- <li><a href="mailDetails.php">Admin Details<span class="nav-tag yellow">2</span></a></li> -->
+                                 <!-- <li><a href="compose.php">Compose<span class="nav-tag red">9</span></a></li> -->
+                            </ul> -->
                         </li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">business</i> Sales<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
+                            <!-- <ul class="nav nav-second-level">
                                 <li><a href="table.php">Simple tables</a></li>
                                 <li><a href="dataTables.php">Data tables</a></li>
                                 <li><a href="footable.php">FooTable</a></li>
                                 <li><a href="x-editable.php">X-editable</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
-                        <li>
+                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">assignment</i> Surveyor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="forms_basic.php">Basic Surveyor</a></li>
-                                <li><a href="form_input_group.php">Input group</a></li>
+                                <!-- <li><a href="forms_basic.php">Basic Surveyor</a></li> -->
+                                <!-- <li><a href="form_input_group.php">Input group</a></li> -->
                                 <li><a href="form-mask.php">Create New Surveyor</a></li>
-                                <li><a href="form_touchspin.php">Surveyor List</a></li>
-                                <li><a href="form_select.php">Select</a></li>
-                                <li><a href="forms_validation.php">Validation Surveyor</a></li>
-                                <li><a href="forms_cropper.php">Cropper</a></li>
+                                <li><a href="form_touchspin.php">Surveyor  Work Deatils</a></li>
+                                <li><a href="form_select.php">Surveyors List</a></li> 
+                                <!-- <li><a href="forms_validation.php">Validation Surveyor</a></li> -->
+                                <!-- <li><a href="forms_cropper.php">Cropper</a></li> -->
                                 <li><a href="form_file_upload.php">Surveyor File Upload</a></li>
-                                <li><a href="forms_editor_ck.php">CK Editor</a></li>
-                                <li><a href="forms_editor_summernote.php">Summernote</a></li>
-                                <li><a href="form_wizard.php">Form Wizaed</a></li>
-                                <li><a href="forms_editor_markdown.php">Markdown</a></li>
-                                <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li>
-                                <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li>
+                                <!-- <li><a href="forms_editor_ck.php">CK Editor</a></li> -->
+                                <!-- <li><a href="forms_editor_summernote.php">Summernote</a></li> -->
+                                <!-- <li><a href="form_wizard.php">Form Wizaed</a></li> -->
+                                <!-- <li><a href="forms_editor_markdown.php">Markdown</a></li> -->
+                                <!-- <li><a href="forms_editor_trumbowyg.php">Trumbowyg</a></li> -->
+                                <!-- <li><a href="form_editor_wysihtml5.php">Wysihtml5</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
+                        <!-- <li class="nav-heading "> <span>Components&nbsp;&nbsp;&nbsp;&nbsp;------</span></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">format_color_fill</i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -584,7 +636,7 @@ $fno = $_POST['fno'];
                         </li>
                         <li><a href="blank.php" class="material-ripple"><i class="material-icons">check_box_outline_blank</i> Blank page</a></li>
                         <li><a href="https://thememinister.com/adminpage/documentation/index.php" class="material-ripple" target="_blank"><i class="material-icons">bookmark</i> Documentation</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
@@ -797,7 +849,7 @@ $fno = $_POST['fno'];
                     </div> <!-- /. Content Header (Page header) -->
                     
                     <div class="row">
-                        
+                          <form id="surveyForm" method="post" onsubmit="showConfirmation(event); return false;">
                     <div class="col-sm-6 col-md-4">
     <div class="panel panel-primary lobidisable">
         <div class="panel-heading">
@@ -805,33 +857,121 @@ $fno = $_POST['fno'];
                 <h4>Survey Process</h4>
             </div>
         </div>
-        <div class="panel-body">
-            <div class="form-group row">
-                <input type="hidden" name="fno" value="<?= $fno ?>">
-                <div class="col-sm-12">
-                    <label class="col-form-label">Date & time</label>
-                    <input class="form-control" type="datetime-local" id="surveyDateTime">
-                </div>
+      
+    <div class="panel-body">
+        <div class="form-group row">
+            <input type="hidden" name="fno" value="<?= $fno ?>">
+            <input type="hidden" name="heatingSource" id="heatingSource"  value="<?= $row['heatingSource'] ?>">
+            <input type="hidden" name="isHeatingSourceOld" id="isHeatingSourceOld" value="<?= $row['isHeatingSourceOld'] ?>">
+            <input type="hidden" name="propertyOwnership" id="propertyOwnership" value="<?= $row['propertyOwnership'] ?>">
+            <input type="hidden" name="benefit" id="benefit" value="<?= $row['benefit'] ?>">
+            <input type="hidden" name="property" id="property" value="<?= $row['property'] ?>">
+            <input type="hidden" name="bedroom" id="bedroom" value="<?= $row['bedroom'] ?>">
+            <input type="hidden" name="wall" id="wall" value="<?= $row['wall'] ?>">
+            <input type="hidden" name="firstName" id="firstName" value="<?= $row['firstName'] ?>">
+            <input type="hidden" name="lastName" id="lastName" value="<?= $row['lastName'] ?>">
+            <input type="hidden" name="email" id="email" value="<?= $row['email'] ?>">
+            <input type="hidden" name="phone" id="phone" value="<?= $row['phone'] ?>">
+            <input type="hidden" name="addressLine1" id="addressLine1" value="<?= $row['addressLine1'] ?>">
+            <input type="hidden" name="addressLine2" id="addressLine2" value="<?= $row['addressLine2'] ?>">
+            <input type="hidden" name="city" id="city" value="<?= $row['city'] ?>">
+            <input type="hidden" name="postcode" id="postcode" value="<?= $row['postcode'] ?>">
+            <input type="hidden" name="reference" id="reference" value="<?= $row['reference'] ?>">
+         
+            
+            
+            
+            <div class="col-sm-12">
+                <label class="col-form-label">Date & time</label>
+                <input class="form-control" type="datetime-local" name="surveyDateTime" id="surveyDateTime">
             </div>
-            <select class="form-control custom-dropdown" id="surveyorSelect">
-                <option selected>Select Surveyor</option>
-                <?php foreach ($records as $record): ?>
-                    <option style="color: black;" value="<?= $record['surveyoremail']; ?>">
-                        <?= $record['surveyoremail']; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
         </div>
-        <div class="panel-footer">
-            <button onclick="confirmservay(<?= $fno ?>)" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Appoint">
-                <i class="fa fa-check" aria-hidden="true"></i>
-            </button>
-        </div>
+        <select class="form-control custom-dropdown" name="surveyorSelect" id="surveyorSelect">
+            <option selected>Surveyors List Surveyor</option>
+            <?php foreach ($records as $record): ?>
+                <option style="color: black;" value="<?= $record['surveyoremail']; ?>">
+                    <?= $record['surveyoremail']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Appoint">
+            <!--<input type="submit" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="right" title="Appoint" >-->
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
     </div>
 </div>
+</form>   <script>
+function showConfirmation(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-                        <div class="col-sm-6 col-md-4">
-                            <!-- Success Panel -->
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You will not be able to recover this record!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes, do it!",
+        cancelButtonText: "No, cancel plx!",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            submitForm();
+        }
+    });
+}
+
+function submitForm() {
+    var formData = new FormData(document.getElementById("surveyForm"));
+
+    fetch("php/confirmsurvay.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Error in confirmsurvay.php");
+        }
+    })
+    .then(data => {
+        console.log("Data from confirmsurvay.php:", data);
+        // Handle the response, e.g., show a notification
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+
+    fetch("php/update_survey.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Error in update_survey.php");
+        }
+    })
+    .then(data => {
+        console.log("Data from update_survey.php:", data);
+        // Handle the response, e.g., show a notification
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+</script>
+
+
+
+                         <div class="col-sm-6 col-md-4">
+                           
                             <div class="panel panel-success lobidisable">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -849,7 +989,7 @@ $fno = $_POST['fno'];
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <!-- Info Panel -->
+                           
                             <div class="panel panel-info lobidisable">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -867,7 +1007,7 @@ $fno = $_POST['fno'];
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <!-- Warning Panel -->
+                         
                             <div class="panel panel-warning lobidisable">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -885,7 +1025,7 @@ $fno = $_POST['fno'];
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <!-- Danger Panel -->
+                           
                             <div class="panel panel-danger lobidisable">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -903,7 +1043,7 @@ $fno = $_POST['fno'];
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4">
-                            <!-- Inverse Panel -->
+                         
                             <div class="panel panel-inverse lobidisable">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -919,14 +1059,17 @@ $fno = $_POST['fno'];
                                     This is standard panel footer
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div> <!-- /.main content -->
             </div><!-- /#page-wrapper -->
         </div><!-- /#wrapper -->
         <!-- START CORE PLUGINS -->
+        
+        
+        
 
-        <script>
+        <!-- <script>
 function confirmservay(recordId) {
     Swal.fire({
         title: "Are you sure?",
@@ -941,6 +1084,10 @@ function confirmservay(recordId) {
             const surveyDateTime = document.getElementById("surveyDateTime").value;
             const surveyorEmail = document.getElementById("surveyorSelect").value;
 
+            // Debug: Log data before AJAX request
+            console.log("Survey DateTime:", surveyDateTime);
+            console.log("Surveyor Email:", surveyorEmail);
+
             // Send data to the server using AJAX
             $.ajax({
                 type: "POST",
@@ -951,6 +1098,9 @@ function confirmservay(recordId) {
                     surveyorEmail: surveyorEmail,
                 },
                 success: function (response) {
+                    // Debug: Log the response
+                    console.log("AJAX Success. Response:", response);
+
                     if (response === "success") {
                         Swal.fire("Appointed!", "Your appointment has been successful.", "success").then(() => {
                             location.reload();
@@ -960,6 +1110,9 @@ function confirmservay(recordId) {
                     }
                 },
                 error: function (error) {
+                    // Debug: Log any AJAX errors
+                    console.log("AJAX Error:", error);
+
                     Swal.fire("Error", "Failed to appoint the record.", "error");
                 },
             });
@@ -968,7 +1121,9 @@ function confirmservay(recordId) {
         }
     });
 }
-</script>
+
+</script> -->
+
 
 
 

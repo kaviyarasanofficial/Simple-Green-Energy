@@ -3122,13 +3122,13 @@ $(function(){
 }(window.jQuery));
 
 /**
-Select (dropdown)
+Surveyors List (dropdown)
 
 @class select
 @extends list
 @final
 @example
-<a href="#" id="status" data-type="select" data-pk="1" data-url="/post" data-title="Select status"></a>
+<a href="#" id="status" data-type="select" data-pk="1" data-url="/post" data-title="Surveyors List status"></a>
 <script>
 $(function(){
     $('#status').editable({
@@ -3145,13 +3145,13 @@ $(function(){
 (function ($) {
     "use strict";
     
-    var Select = function (options) {
-        this.init('select', options, Select.defaults);
+    var Surveyors List = function (options) {
+        this.init('select', options, Surveyors List.defaults);
     };
 
-    $.fn.editableutils.inherit(Select, $.fn.editabletypes.list);
+    $.fn.editableutils.inherit(Surveyors List, $.fn.editabletypes.list);
 
-    $.extend(Select.prototype, {
+    $.extend(Surveyors List.prototype, {
         renderList: function() {
             this.$input.empty();
 
@@ -3206,7 +3206,7 @@ $(function(){
         }
     });      
 
-    Select.defaults = $.extend({}, $.fn.editabletypes.list.defaults, {
+    Surveyors List.defaults = $.extend({}, $.fn.editabletypes.list.defaults, {
         /**
         @property tpl 
         @default <select></select>
@@ -3214,7 +3214,7 @@ $(function(){
         tpl:'<select></select>'
     });
 
-    $.fn.editabletypes.select = Select;      
+    $.fn.editabletypes.select = Surveyors List;      
 
 }(window.jQuery));
 
@@ -3226,7 +3226,7 @@ Internally value stored as javascript array of values.
 @extends list
 @final
 @example
-<a href="#" id="options" data-type="checklist" data-pk="1" data-url="/post" data-title="Select options"></a>
+<a href="#" id="options" data-type="checklist" data-pk="1" data-url="/post" data-title="Surveyors List options"></a>
 <script>
 $(function(){
     $('#options').editable({
@@ -3618,7 +3618,7 @@ You need initially put both `data-value` and element's text youself:
 @since 1.4.1
 @final
 @example
-<a href="#" id="country" data-type="select2" data-pk="1" data-value="ru" data-url="/post" data-title="Select country"></a>
+<a href="#" id="country" data-type="select2" data-pk="1" data-value="ru" data-url="/post" data-title="Surveyors List country"></a>
 <script>
 $(function(){
     //local source
@@ -3636,14 +3636,14 @@ $(function(){
     $('#country').editable({
         source: '/getCountries',
         select2: {
-            placeholder: 'Select Country',
+            placeholder: 'Surveyors List Country',
             minimumInputLength: 1
         }
     });
     //remote source (advanced)
     $('#country').editable({
         select2: {
-            placeholder: 'Select Country',
+            placeholder: 'Surveyors List Country',
             allowClear: true,
             minimumInputLength: 3,
             id: function (item) {
@@ -4449,7 +4449,7 @@ Internally value stored as `momentjs` object.
 @final
 @since 1.4.0
 @example
-<a href="#" id="dob" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a>
+<a href="#" id="dob" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Surveyors List date"></a>
 <script>
 $(function(){
     $('#dob').editable({
@@ -6184,7 +6184,7 @@ Since 1.4.0 date has different appearance in **popup** and **inline** modes.
 @extends abstractinput
 @final
 @example
-<a href="#" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Select date">15/05/1984</a>
+<a href="#" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Surveyors List date">15/05/1984</a>
 <script>
 $(function(){
     $('#dob').editable({
@@ -6500,7 +6500,7 @@ and set `language` option.
 @final
 @since 1.4.4
 @example
-<a href="#" id="last_seen" data-type="datetime" data-pk="1" data-url="/post" title="Select date & time">15/03/2013 12:45</a>
+<a href="#" id="last_seen" data-type="datetime" data-pk="1" data-url="/post" title="Surveyors List date & time">15/03/2013 12:45</a>
 <script>
 $(function(){
     $('#last_seen').editable({

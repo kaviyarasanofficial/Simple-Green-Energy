@@ -1,76 +1,67 @@
-
 <?php
-// Include the PHPMailer library for sending emails
-require 'vendor/autoload.php';
-
-// Get the f.no from the POST request
-$fno = $_POST['fno'];
-
-// Database connection settings
-$servername = 'localhost';
-$username = 'rectubmx_simplegreen';
-$password = '3N2h0DEwaDJ#';
-$database = 'rectubmx_simplegreenenergy';
-
-// Create a new PHPMailer instance for sending emails
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-
-// Database connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check the database connection
-if ($conn->connect_error) {
-    echo 'error';
-    exit();
-}
-
-// SQL query to retrieve data from the users table
-$sql = "SELECT * FROM users WHERE fno = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $fno);
-
-// Execute the query
-$stmt->execute();
-
-// Get the result
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-
-    // Get the surveyor's email
-    $surveyorEmail = $_POST['surveyorEmail'];
-
-    // Compose the email
-    $mail->isSMTP();
-    $mail->Host = 'smtp.example.com'; // Your SMTP server
-    $mail->SMTPAuth = true;
-    $mail->Username = 'your_email@example.com'; // Your email
-    $mail->Password = 'your_password';
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
-
-    $mail->setFrom('your_email@example.com', 'Your Name');
-    $mail->addAddress($surveyorEmail);
-    $mail->isHTML(true);
-    $mail->Subject = 'Survey Appointment Details';
-    $mail->Body = "You have a survey appointment for f.no: $fno on {$_POST['surveyDateTime']}. Data from the user table:<br>";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    foreach ($row as $key => $value) {
-        $mail->Body .= "$key: $value<br>";
-    }
+    $surveyDateTime = $_POST['surveyDateTime'];
+    $surveyorSelect = $_POST['surveyorSelect'];
+    
+  
+	$heatingSource = $_POST['heatingSource'];
+	$isHeatingSourceOld = $_POST['isHeatingSourceOld'];
+	$propertyOwnership = $_POST['propertyOwnership'];
+	$benefit = $_POST['benefit'];
+	$property = $_POST['property'];
+	$bedroom = $_POST['bedroom'];
+	$wall = $_POST['wall'];
+	$firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$addressLine1 = $_POST['addressLine1'];
+	$addressLine2 = $_POST['addressLine2'];
+	$city = $_POST['city'];
+	$postcode = $_POST['postcode'];
+	$reference = $_POST['reference'];
+			
 
-    // Send the email
-    if ($mail->send()) {
-        echo 'success';
+    // Compose and send an email
+     $to = $surveyorSelect . ', ' . $email; // The recipient's email address
+    $subject = 'New Survey Appointment';
+    $message = "Hello,";
+    $message .= "Survey Date & Time: $surveyDateTime\n\n";
+    $message .= "$heatingSource\n";
+    $message .= "$isHeatingSourceOld\n";
+    $message .= "$propertyOwnership\n";
+    $message .= "$benefit\n";
+    $message .= "$property\n";
+    $message .= "$bedroom\n";
+    $message .= "$wall\n";
+    $message .= "$firstName\n";
+    $message .= "$lastName\n";
+    $message .= "$email\n";
+    $message .= "$phone\n";
+    $message .= "$addressLine1\n";
+    $message .= "$addressLine2\n";
+    $message .= "$city\n";
+    $message .= "$postcode\n";
+    $message .= "$reference\n";
+	
+
+    // You can include additional information in the email message if needed.
+
+    $headers = 'From: contactus@simplegreenenergy.org' . "\r\n";
+
+    if (mail($to, $subject, $message, $headers)) {
+        // Email sent successfully
+        echo "<script>
+                alert('Email sent to $surveyorSelect successfully!');
+                window.history.back();
+              </script>";
     } else {
-        echo 'error';
+        // Email sending failed
+        echo "<script>
+                alert('Email could not be sent.');
+                window.history.back();
+              </script>";
     }
-} else {
-    echo 'error'; // Handle the case where no data was found for the given f.no
 }
-
-// Close the database connection
-$stmt->close();
-$conn->close();
 ?>

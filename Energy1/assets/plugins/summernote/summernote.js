@@ -2087,7 +2087,7 @@
         shapeNone: 'Shape: None',
         dragImageHere: 'Drag image or text here',
         dropImage: 'Drop image or Text',
-        selectFromFiles: 'Select from files',
+        selectFromFiles: 'Surveyors List from files',
         maximumFileSize: 'Maximum file size',
         maximumFileSizeError: 'Maximum file size exceeded.',
         url: 'Image URL',
@@ -2199,7 +2199,7 @@
       },
       specialChar: {
         specialChar: 'SPECIAL CHARACTERS',
-        select: 'Select Special characters'
+        select: 'Surveyors List Special characters'
       }
     }
   });

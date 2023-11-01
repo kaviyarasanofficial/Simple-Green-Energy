@@ -39,9 +39,9 @@
         <!-- Content Wrapper -->
         <div class="lock-wrapper-page">
             <div class="text-center">
-                <a href="index.php" class="logo-lock"><i class="icon socicon-feedburner"></i> <span>AdmnPage</span> </a>
+                <a href="customer_index.php" class="logo-lock"><i class="icon socicon-feedburner"></i> <span>AdmnPage</span> </a>
             </div>
-            <form method="post" action="https://thememinister.com/adminpage/theme/adminpage_v2.0/index.php" class="text-center m-t-20">
+            <form method="post" action="https://thememinister.com/adminpage/theme/adminpage_v2.0/customer_index.php" class="text-center m-t-20">
                 <div class="user-thumb">
                     <img src="assets/dist/img/avatar.png" class="img-responsive img-circle img-thumbnail" alt="thumbnail">
                 </div>
